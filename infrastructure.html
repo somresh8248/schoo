@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Infrastructure || Academic Heights Public School</title>
+
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+
+    <!-- Custom Infrastructure Styling -->
+    <style>
+        .main-menu.style2 .navigation>li>ul {
+            top: 100% !important;
+            margin-top: 0 !important;
+        }
+
+        .main-menu.style2 .navigation>li {
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
+        }
+
+        /* Infrastructure Filter Buttons */
+        .gallery-filter-btn {
+            background: #ffffff;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            margin: 5px 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .gallery-filter-btn:hover,
+        .gallery-filter-btn.active {
+            background: #d41919;
+            color: #ffffff;
+            border-color: #d41919;
+            box-shadow: 0 6px 18px rgba(212, 25, 25, 0.25);
+        }
+
+        /* Infrastructure Image Card Item */
+        .gallery-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f5f9;
+            margin-bottom: 30px;
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: block;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(212, 25, 25, 0.2);
+            border-color: #d41919;
+        }
+
+        .gallery-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4 / 3;
+            background: #f8fafc;
+            border-radius: 16px;
+        }
+
+        .gallery-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+
+        .gallery-card:hover .gallery-img-wrapper img {
+            transform: scale(1.08);
+        }
+
+        .gallery-img-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .gallery-card:hover .gallery-img-overlay {
+            opacity: 1;
+        }
+
+        .gallery-tag {
+            display: inline-block;
+            background: #d41919;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 767px) {
+            .gallery-filter-btn {
+                padding: 8px 16px;
+                font-size: 13px;
+                margin: 4px 3px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxed_wrapper">
+
+        <div class="preloader"></div>
+
+        <section class="top-bar-style2">
+            <div class="top-style2">
+                <div class="top-style2-left">
+                    <ul>
+                        <li>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+918050065050">+91 8050065050</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:support@ahpsvarthur.com">support@ahpsvarthur.com</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            Mon - Sat: 08:00 AM to 04:30 PM
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-style2-right">
+                    <ul class="topbar-social-links">
+                        <li><a href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--Start Main Header-->
+        <header class="main-header header-style2 stricky">
+            <div class="inner-container clearfix">
+                <div class="logo-box-style2 float-left">
+                    <a href="index.html">
+                        <img src="images/brand/logo.png" alt="Academic Heights Public School Logo">
+                    </a>
+                </div>
+                <div class="main-menu-box float-right">
+                    <nav class="main-menu style2 clearfix">
+                        <div class="navbar-header clearfix">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="dropdown current"><a href="javascript:void(0)">About Us</a>
+                                    <ul>
+                                        <li><a href="our-story.html">Our Story</a></li>
+                                        <li><a href="vision-mission.html">Vision & Mission</a></li>
+                                        <li><a href="leadership.html">Leadership</a></li>
+                                        <li><a href="our-team.html">Our Team</a></li>
+                                        <li><a href="testimonials.html">Testimonial</a></li>
+                                        <li class="current"><a href="infrastructure.html">Infrastructure</a></li>
+                                        <li><a href="transport.html">Transport</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="academic.html">Academics</a>
+                                    <ul>
+                                        <li><a href="academic.html">Academics Overview</a></li>
+                                        <li><a href="curriculum.html">Curriculum</a></li>
+                                        <li><a href="primary-middle.html">Primary to Middle</a></li>
+                                        <li><a href="co-curriculum.html">Co-Curriculum</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="admission-process.html">Admissions</a>
+                                    <ul>
+                                        <li><a href="admission-process.html">Admission Process</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="events-gallery.html">Events &amp; Gallery</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="https://mauranipur.academicheights.in/mandatorypublicdisclosure/" target="_blank">Public Mandatory Disclosure</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!--End Main Header-->
+
+        <!--Start Admissions Attention Bar-->
+        <div class="Admissions-attention-bar">
+            <div class="container">
+                <div class="attention-content">
+                    <span class="attention-badge"><span class="pulse-dot"></span> AdmissionsS OPEN</span>
+                    <span class="attention-text">🎓 <strong>Admissions Open For 2026-2027 Batch</strong> &mdash; Enroll Your Child for Academic Excellence!</span>
+                    <a href="javascript:void(0)" class="attention-btn" data-toggle="modal" data-target="#AdmissionsModal" data-grade="Grade I Onwards">
+                        Apply Now <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--End Admissions Attention Bar-->
+
+        <!--Start Breadcrumb Area-->
+        <section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="inner-content clearfix">
+                            <div class="title">
+                                <h1>Infrastructure</h1>
+                            </div>
+                            <div class="breadcrumb-menu float-right">
+                                <ul class="clearfix">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li class="active">Infrastructure</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Breadcrumb Area-->
+
+        <!--Start Infrastructure Main Section-->
+        <section style="padding: 80px 0 90px; background: #ffffff;">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="sec-title text-center" style="margin-bottom: 40px;">
+                    <p style="display: inline-block; background-color: #d41919; color: #ffffff; padding: 6px 18px; border-radius: 6px; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(212, 25, 25, 0.25);">
+                        World-Class Facilities
+                    </p>
+                    <div class="title" style="font-size: 38px; line-height: 48px; font-weight: 800; color: #1a1a1a;">
+                        Our Modern <span style="color: #d41919;">Infrastructure</span>
+                    </div>
+                    <p style="font-size: 16px; color: #64748b; max-width: 750px; margin: 12px auto 0;">
+                        Our campus is thoughtfully designed to provide a safe, inspiring, and feature-rich environment for holistic learning, physical growth, and creative exploration.
+                    </p>
+                </div>
+
+                <!-- Filter Category Tabs -->
+                <div class="text-center" style="margin-bottom: 45px;">
+                    <button class="gallery-filter-btn active" onclick="filterGallery('all', event)">All</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('outdoor-sports', event)">Outdoor Sports</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('indoor-room', event)">Indoor Room</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('library', event)">Library</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('art-room', event)">Art Room</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('pre-primary', event)">Pre-primary Concept Room</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('chess-room', event)">Chess Room</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('music-room', event)">Music Room</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('av-room', event)">AV Room</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('transport', event)">Transport</button>
+                </div>
+
+                <!-- Infrastructure Items Grid (Image-Only Cards) -->
+                <div class="row" id="gallery-grid">
+
+                    <!-- Outdoor Sports -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item outdoor-sports">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/sports.jpeg" alt="Outdoor Sports">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Outdoor Sports</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outdoor Sports - Item 2 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item outdoor-sports">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/outdoor1.jpeg" alt="Basketball Court">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Outdoor Sports</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outdoor Sports - Item 3 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item outdoor-sports">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/outdoor2.jpeg" alt="Football Ground">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Outdoor Sports</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outdoor Sports - Item 4 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item outdoor-sports">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/outdoor3.jpeg" alt="Athletics Track">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Outdoor Sports</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outdoor Sports - Item 5 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item outdoor-sports">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/outdoor4.jpeg" alt="Cricket Pitch">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Outdoor Sports</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outdoor Sports - Item 6 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item outdoor-sports">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/outdoor5.jpeg" alt="Skating Rink">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Outdoor Sports</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Indoor Room -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item indoor-room">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/Indoor.jpeg" alt="Indoor Room">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Indoor Room</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Library -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item library">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/Central.jpeg" alt="Library">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Library</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Library - Item 2 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item library">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/library1.jpeg" alt="Reading Section">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Library</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Library - Item 3 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item library">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/library2.jpeg" alt="Digital Resource Center">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Library</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Library - Item 4 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item library">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/library3.jpeg" alt="Book Stacks">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Library</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Library - Item 5 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item library">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/library4.jpeg" alt="Study Corner">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Library</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Art Room - Item 1 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item art-room">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/art1.jpeg" alt="Creative Studio Corner">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Art Room</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Art Room - Item 2 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item art-room">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/art2.jpeg" alt="Creative Studio Corner">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Art Room</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pre-primary Concept Room -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item pre-primary">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/primary.jpeg" alt="Pre-primary Concept Room">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Pre-Primary Room</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item pre-primary">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/primary1.jpeg" alt="Pre-primary Concept Room">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Pre-Primary Room</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item pre-primary">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/primary2.jpeg" alt="Pre-primary Concept Room">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Pre-Primary Room</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chess Room -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item chess-room">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/chess1.jpeg" alt="Chess Room">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Chess Room</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Music Room - Item 1 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item music-room">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/music.jpeg" alt="Music Room">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Music Room</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Music Room - Item 2 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item music-room">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/music1.jpeg" alt="Music Room">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Music Room</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AV Room -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item av-room">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/av.jpeg" alt="AV Room">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">AV Room</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transport - Item 1 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item transport">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/transport1.jpeg" alt="School Bus Fleet">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Transport</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transport - Item 2 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item transport">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/transport2.jpeg" alt="Safe Student Pickup Area">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Transport</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transport - Item 3 -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item transport">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/transport3.jpeg" alt="GPS Enabled Buses">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Transport</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Field Trip -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item field-trip">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/v1-9.jpg" alt="Field Trip">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Field Trip</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Assembly Photos -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item assembly-photos">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/v1-1.jpg" alt="Assembly Photos">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Assembly</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--End Infrastructure Main Section-->
+
+        <!--Start Footer Area Style4-->
+        <footer class="footer-area style4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-footer-widget marbtm50-s4">
+                            <div class="our-info-box">
+                                <div class="footer-logo">
+                                    <a href="index.html">
+                                        <img src="images/footer/footer-logo.png" alt="Academic Heights Public School Logo">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <p>Academic Heights Public School is dedicated to nurturing curiosity, creativity, and leadership in every student, preparing them for academic success and life.</p>
+                                </div>
+                                <div class="follow-us-social-links clearfix">
+                                    <span>Follow Us On:</span>
+                                    <ul>
+                                        <li><a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a></li>
+                                        <li><a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-footer-widget s4">
+                            <div class="title-s4">
+                                <h3>Quick Links</h3>
+                            </div>
+                            <div class="single-footer-link-box clearfix">
+                                <ul class="clearfix">
+                                    <li><a href="about.html"><i class="fa fa-angle-right"></i>About Us</a></li>
+                                    <li><a href="curriculum.html"><i class="fa fa-angle-right"></i>Academics</a></li>
+                                    <li><a href="admission-process.html"><i class="fa fa-angle-right"></i>Admissions</a></li>
+                                    <li><a href="infrastructure.html"><i class="fa fa-angle-right"></i>Infrastructure</a></li>
+                                    <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                        <div class="single-footer-widget s4">
+                            <div class="title-s4">
+                                <h3>Contact Information</h3>
+                            </div>
+                            <div class="footer-contact-info-s4">
+                                <ul>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-map-marker"></i></div>
+                                        <div class="text">
+                                            <p>Sy No. 46/8, Chikkanekundi, Dommasandra Road, Varthur, Bangalore, India, 560087</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-phone"></i></div>
+                                        <div class="text">
+                                            <p><a href="tel:+918050065050">+91 8050065050</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-envelope"></i></div>
+                                        <div class="text">
+                                            <p><a href="mailto:admissions@ahpsvarthur.com">admissions@ahpsvarthur.com</a></p>
+                                            <p><a href="mailto:support@ahpsvarthur.com">support@ahpsvarthur.com</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer Area Style4-->
+
+        <!--Start Footer Bottom Area-->
+        <section class="footer-bottom-area style3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="copyright-text text-center">
+                            <p>© 2026 <a href="index.html">Academic Heights Public School</a>. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Footer Bottom Area-->
+
+    </div>
+
+    <!-- Scroll Top Button -->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="http://wa.me/918050065050" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <!-- Unified Infrastructure Filtering Script -->
+    <script>
+        function filterGallery(category, e) {
+            // Handle Active Button State
+            const buttons = document.querySelectorAll('.gallery-filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            if (e && e.target) {
+                e.target.classList.add('active');
+            } else if (window.event && window.event.target) {
+                window.event.target.classList.add('active');
+            }
+
+            // Show/Hide Gallery Items
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

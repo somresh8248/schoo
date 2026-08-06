@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Primary to Middle School Curriculum || Academic Heights Public School</title>
+
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+
+    <!-- Google Fonts for Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .primary-hero-box {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 45px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border-left: 6px solid #F78F1E;
+            margin-bottom: 45px;
+            border-top: 1px solid #f1f5f9;
+            border-right: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .primary-badge {
+            background: linear-gradient(135deg, #fc0505 0%, #d00404 100%);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 7px 18px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 12px rgba(252, 5, 5, 0.25);
+        }
+
+        .hero-pillars-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .hero-pillar-tag {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 30px;
+            padding: 8px 18px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #334155;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-pillar-tag i {
+            color: #F78F1E;
+        }
+
+        .subject-card-box {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 32px 28px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            transition: all 0.35s ease;
+            /* Fixed: Added 's' to 0.35s */
+            border: 1px solid #f1f5f9;
+            height: calc(100% - 30px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subject-card-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #fc0505, #F78F1E);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Base styles for children to allow smooth color transitions */
+        .subject-card-box h4,
+        .subject-card-box p,
+        .subject-card-box .icon-box {
+            transition: all 0.3s ease;
+        }
+
+        .subject-card-box .icon-box {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #fc0505 0%, #d00404 100%);
+            color: #ffffff;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 22px;
+            box-shadow: 0 6px 16px rgba(252, 5, 5, 0.25);
+        }
+
+        .subject-card-box h4 {
+            font-size: 21px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 12px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .subject-card-box p {
+            font-size: 15px;
+            line-height: 1.65;
+            color: #64748b;
+            margin: 0;
+        }
+
+        /* --- HOVER STATES --- */
+
+        .subject-card-box:hover {
+            background: #fc0505;
+            /* Card turns red on hover */
+            border-color: #fc0505;
+            transform: translateY(-8px);
+            box-shadow: 0 16px 35px rgba(252, 5, 5, 0.3);
+        }
+
+        .subject-card-box:hover::before {
+            opacity: 1;
+        }
+
+        /* Invert heading and paragraph text to white on hover */
+        .subject-card-box:hover h4,
+        .subject-card-box:hover p {
+            color: #ffffff;
+        }
+
+        /* Invert icon box to white background with red icon on hover */
+        .subject-card-box:hover .icon-box {
+            background: #ffffff;
+            color: #fc0505;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+        }
+
+        .subject-number {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #e2e8f0;
+            font-family: 'Montserrat', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        .subject-card-box:hover .subject-number {
+            color: #fdba74;
+        }
+
+        .curriculum-download-card {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 16px;
+            padding: 45px 40px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.22);
+            margin-top: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .curriculum-download-card h3 {
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .curriculum-download-card p {
+            color: #94a3b8;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .btn-download-syllabus {
+            background: #F78F1E;
+            color: #ffffff !important;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(247, 143, 30, 0.35);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+        .btn-download-syllabus:hover {
+            background: #fc0505;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(252, 5, 5, 0.4);
+        }
+
+        .teaching-card-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 24px 22px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .teaching-card-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(252, 5, 5, 0.12);
+            border-color: #fc0505;
+        }
+
+        .teaching-card-box .t-icon {
+            width: 52px;
+            height: 52px;
+            min-width: 52px;
+            background: rgba(252, 5, 5, 0.08);
+            color: #fc0505;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            transition: all 0.3s ease;
+        }
+
+        .teaching-card-box:hover .t-icon {
+            background: #fc0505;
+            color: #ffffff;
+        }
+
+        .teaching-card-box h4 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .facility-card-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 26px 22px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+            text-align: center;
+            height: calc(100% - 25px);
+        }
+
+        .facility-card-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 32px rgba(247, 143, 30, 0.15);
+            border-color: #F78F1E;
+        }
+
+        .facility-card-box .f-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, #fff5ed 0%, #ffedd5 100%);
+            color: #F78F1E;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .facility-card-box:hover .f-icon {
+            background: linear-gradient(135deg, #F78F1E 0%, #d97706 100%);
+            color: #ffffff;
+            transform: scale(1.08);
+        }
+
+        .facility-card-box h4 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .core-value-card-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 26px 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+            text-align: center;
+            border-top: 4px solid #fc0505;
+            height: calc(100% - 25px);
+        }
+
+        .core-value-card-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 32px rgba(252, 5, 5, 0.15);
+            border-top-color: #F78F1E;
+        }
+
+        .core-value-card-box .v-badge {
+            width: 45px;
+            height: 45px;
+            margin: 0 auto 14px;
+            background: #f8fafc;
+            color: #fc0505;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .core-value-card-box:hover .v-badge {
+            background: #F78F1E;
+            color: #ffffff;
+        }
+
+        .core-value-card-box h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 6px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxed_wrapper">
+
+        <div class="preloader"></div>
+
+       <section class="top-bar-style2">
+            <div class="top-style2">
+                <div class="top-style2-left">
+                    <ul>
+                        <li>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+918050065050">+91 8050065050</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:support@ahpsvarthur.com">support@ahpsvarthur.com</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            Mon - Sat: 08:00 AM to 04:30 PM
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-style2-right">
+                    <ul class="topbar-social-links">
+                        <li><a href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--Start Main Header-->
+        <header class="main-header header-style2 stricky">
+            <div class="inner-container clearfix">
+                <div class="logo-box-style2 float-left">
+                    <a href="index.html">
+                        <img src="images/brand/logo.png" alt="Academic Heights Public School Logo">
+                    </a>
+                </div>
+                <div class="main-menu-box float-right">
+                    <nav class="main-menu style2 clearfix">
+                        <div class="navbar-header clearfix">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="dropdown"><a href="javascript:void(0)">About Us</a>
+                                    <ul>
+                                        <li><a href="our-story.html">Our Story</a></li>
+                                        <li><a href="vision-mission.html">Vision & Mission</a></li>
+                                        <li><a href="leadership.html">Leadership</a></li>
+                                        <li><a href="our-team.html">Our Team</a></li>
+                                        <li><a href="testimonials.html">Testimonial</a></li>
+                                        <li class="current"><a href="infrastructure.html">Infrastructure</a></li>
+                                        <li><a href="transport.html">Transport</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="academic.html">Academics</a>
+                                    <ul>
+                                        <li><a href="academic.html">Academics Overview</a></li>
+                                        <li><a href="curriculum.html">Curriculum</a></li>
+                                        <li><a href="primary-middle.html">Primary to Middle</a></li>
+                                        <li><a href="co-curriculum.html">Co-Curriculum</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="Admissions-process.html">Admissionss</a>
+                                    <ul>
+                                        <li><a href="Admissions-process.html">Admissions Process</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="events-gallery.html">Events &amp; Gallery</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="https://mauranipur.academicheights.in/mandatorypublicdisclosure/"
+                                        target="_blank">Public Mandatory Disclosure</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!--End Main Header-->
+
+               <!--Start Admissions Attention Bar-->
+        <div class="Admissions-attention-bar">
+            <div class="container">
+                <div class="attention-content">
+                    <span class="attention-badge"><span class="pulse-dot"></span> AdmissionsS OPEN</span>
+                    <span class="attention-text">🎓 <strong>Admissions Open For 2026-2027 Batch</strong> &mdash; Enroll
+                        Your Child for Academic Excellence!</span>
+                    <a href="javascript:void(0)" class="attention-btn" data-toggle="modal" data-target="#AdmissionsModal" data-grade="Grade I Onwards">
+                        Apply Now <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--End Admissions Attention Bar-->
+        <!-- Admissions Enquiry Modal -->
+<div class="modal fade" id="AdmissionsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="modal-close-top" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+            <div class="modal-body">
+                <!-- Header with Brand Logo -->
+                <div class="modal-header-box">
+                    <img src="images/brand/logo.png" alt="AHPS Logo">
+                    <div class="modal-header-title">
+                        <h3>Admissions Enquiry Form</h3>
+                        <p>Begin Your Child's Learning Journey</p>
+                    </div>
+                </div>
+
+                <!-- Alert Box for Web3Forms Status -->
+                <div id="modal-form-result" style="display: none; margin-bottom: 15px; padding: 10px 14px; border-radius: 8px; font-size: 13px;"></div>
+
+                <form id="modal-enquiry-form" action="https://api.web3forms.com/submit" method="POST">
+
+                    <!-- Web3Forms Config -->
+                    <input type="hidden" name="access_key" value="29251925-a4be-44f5-906a-75ad8849fe10">
+                    <input type="hidden" name="subject" value="New Admissions Enquiry (Apply Now) - Academic Heights Public School">
+                    <input type="hidden" name="from_name" value="AHPS Admissions Portal">
+                    <input type="checkbox" name="botcheck" style="display: none;">
+
+                    <!-- Student Details -->
+                    <div class="form-section-title"><i class="fa fa-user"></i> Student Details</div>
+                    <div class="row">
+                        <div class="col-sm-6 col-12">
+                            <div class="modal-form-group">
+                                <label>Student Name *</label>
+                                <i class="fa fa-user modal-icon"></i>
+                                <input type="text" name="student_name" placeholder="Enter student full name" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12">
+                            <div class="modal-form-group">
+                                <label>Date of Birth *</label>
+                                <i class="fa fa-calendar modal-icon"></i>
+                                <input type="text" name="dob" placeholder="DD / MM / YYYY" onfocus="(this.type='date')" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12">
+                            <div class="modal-form-group">
+                                <label>Gender *</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="gender" value="Male" required> Male</label>
+                                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12">
+                            <div class="modal-form-group">
+                                <label>Applying For *</label>
+                                <select name="modal_applying_for" id="modal_applying_for" required>
+                                    <option value="" disabled selected>Select Class</option>
+                                    <option value="Nursery">Nursery</option>
+                                    <option value="LKG">LKG</option>
+                                    <option value="UKG">UKG</option>
+                                    <option value="Grade I Onwards">Grade I Onwards</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Parent / Guardian Details -->
+                    <div class="form-section-title"><i class="fa fa-users"></i> Parent / Guardian Details</div>
+                    <div class="row">
+                        <div class="col-sm-6 col-12">
+                            <div class="modal-form-group">
+                                <label>Parent / Guardian Name *</label>
+                                <i class="fa fa-user modal-icon"></i>
+                                <input type="text" name="parent_name" placeholder="Enter parent/guardian name" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12">
+                            <div class="modal-form-group">
+                                <label>Mobile Number *</label>
+                                <i class="fa fa-phone modal-icon"></i>
+                                <input type="tel" name="phone" placeholder="Enter mobile number" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="modal-form-group">
+                                <label>Email Address</label>
+                                <i class="fa fa-envelope modal-icon"></i>
+                                <input type="email" name="email" placeholder="Enter email address">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="form-section-title"><i class="fa fa-map-marker"></i> Address</div>
+                    <div class="row">
+                        <div class="col-sm-4 col-12">
+                            <div class="modal-form-group">
+                                <label>City *</label>
+                                <i class="fa fa-map-marker modal-icon"></i>
+                                <input type="text" name="city" placeholder="Enter city" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-12">
+                            <div class="modal-form-group">
+                                <label>State *</label>
+                                <select name="state" required>
+                                    <option value="" disabled selected>Select state</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-12">
+                            <div class="modal-form-group">
+                                <label>Pincode</label>
+                                <i class="fa fa-map-pin modal-icon"></i>
+                                <input type="text" name="pincode" placeholder="Enter pincode">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-section-title"><i class="fa fa-info-circle"></i> Additional Information</div>
+                    <div class="row">
+                        <div class="col-sm-6 col-12">
+                            <div class="modal-form-group">
+                                <label>Previous School</label>
+                                <i class="fa fa-university modal-icon"></i>
+                                <input type="text" name="previous_school" placeholder="Enter previous school name">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12">
+                            <div class="modal-form-group">
+                                <label>Message / Query</label>
+                                <i class="fa fa-pencil modal-icon"></i>
+                                <textarea name="message" rows="1" placeholder="Write your message..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms Checkbox -->
+                    <div style="margin-top: 10px;">
+                        <label style="font-size: 12px; color: #64748b; font-weight: 400; cursor: pointer;">
+                            <input type="checkbox" required checked> I agree to be contacted by Academic Heights Public School regarding Admissions.
+                        </label>
+                    </div>
+
+                    <!-- Submit & Cancel Buttons -->
+                    <div class="modal-actions">
+                        <button type="submit" class="btn-submit-modal">Submit Application <i class="fa fa-arrow-right"></i></button>
+                        <button type="button" class="btn-cancel-modal" data-dismiss="modal">Cancel</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!--Start Breadcrumb Area-->
+        <section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="inner-content clearfix">
+                            <div class="title">
+                                <h1>PRIMARY TO MIDDLE</h1>
+                            </div>
+                            <div class="breadcrumb-menu float-right">
+                                <ul class="clearfix">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="javascript:void(0)">Academics</a></li>
+                                    <li class="active">Primary to Middle</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Breadcrumb Area-->
+
+        <!--Start Main Primary to Middle Content Section-->
+        <section style="padding: 90px 0 70px; background: #f8fafc;">
+            <div class="container">
+
+                <!-- Hero Overview Box Design -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="primary-hero-box">
+                            <span class="primary-badge">Academic Stage: Grades 1 – 8</span>
+                            <h2
+                                style="font-size: 36px; font-weight: 800; color: #1e293b; margin-bottom: 16px; font-family: 'Montserrat', sans-serif;">
+                                PRIMARY TO MIDDLE CURRICULUM
+                            </h2>
+                            <p
+                                style="font-size: 19px; line-height: 1.8; color: #334155; font-weight: 500; margin-bottom: 0;">
+                                A balanced curriculum that strengthens conceptual understanding while encouraging
+                                creativity and inquiry.
+                            </p>
+                            <div class="hero-pillars-wrap">
+                                <span class="hero-pillar-tag"><i class="fa fa-check-circle"></i> Conceptual
+                                    Clarity</span>
+                                <span class="hero-pillar-tag"><i class="fa fa-check-circle"></i> Experiential
+                                    Learning</span>
+                                <span class="hero-pillar-tag"><i class="fa fa-check-circle"></i> Creative Inquiry</span>
+                                <span class="hero-pillar-tag"><i class="fa fa-check-circle"></i> Holistic
+                                    Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section Header for Subjects -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="sec-title text-center" style="margin-bottom: 50px;">
+                            <!-- "Guiding Academic Excellence" styled as a solid red badge box with white text -->
+                            <p
+                                style="display: inline-block; background-color: #d41919; color: #ffffff; padding: 6px 18px; border-radius: 6px; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(212, 25, 25, 0.25);">
+                                Guiding Academic Excellence
+                            </p>
+
+                            <!-- Main Title with Red Highlight Accent -->
+                            <div class="title"
+                                style="font-size: 38px; line-height: 48px; font-weight: 800; color: #1a1a1a;">
+                                Meet Our <span style="color: #d41919;">Admin Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11 Subject Cards Box Grid -->
+                <div class="row">
+                    <!-- 1. English -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">01</span>
+                            <div class="icon-box"><i class="fa fa-book"></i></div>
+                            <h4>English</h4>
+                            <!-- <p>Developing effective verbal and written communication, comprehensive reading skills, creative writing, grammar mastery, and literary appreciation.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 2. Mathematics -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">02</span>
+                            <div class="icon-box"><i class="fa fa-calculator"></i></div>
+                            <h4>Mathematics</h4>
+                            <!-- <p>Strengthening numerical fluency, logical reasoning, problem-solving techniques, geometry, algebra fundamentals, and real-world math applications.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 3. Environmental Studies -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">03</span>
+                            <div class="icon-box"><i class="fa fa-leaf"></i></div>
+                            <h4>Environmental Studies</h4>
+                            <!-- <p>Instilling awareness of ecosystems, natural resources, community living, sustainability habits, and environmental stewardship from an early age.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 4. Science -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">04</span>
+                            <div class="icon-box"><i class="fa fa-flask"></i></div>
+                            <h4>Science</h4>
+                            <!-- <p>Fostering scientific curiosity through hands-on experiments, scientific methods, physical world exploration, and foundational Physics, Chemistry, & Biology.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 5. Social Studies -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">05</span>
+                            <div class="icon-box"><i class="fa fa-globe"></i></div>
+                            <h4>Social Studies</h4>
+                            <!-- <p>Exploring History, Geography, Civics, and world cultures to cultivate informed, empathetic, and responsible global citizens.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 6. Computer Science -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">06</span>
+                            <div class="icon-box"><i class="fa fa-laptop"></i></div>
+                            <h4>Computer Science</h4>
+                            <!-- <p>Empowering students with digital literacy, computational logic, basic coding principles, software tools, and safe internet practices.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 7. General Knowledge -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">07</span>
+                            <div class="icon-box"><i class="fa fa-lightbulb-o"></i></div>
+                            <h4>General Knowledge</h4>
+                            <!-- <p>Expanding horizons through current affairs, global discoveries, interactive quizzes, analytical brain teasers, and general awareness activities.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 8. Art & Craft -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">08</span>
+                            <div class="icon-box"><i class="fa fa-paint-brush"></i></div>
+                            <h4>Art &amp; Craft</h4>
+                            <!-- <p>Encouraging visual creativity, color exploration, sketching, crafting projects, and imaginative design through hands-on artistic workshops.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 9. Music -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">09</span>
+                            <div class="icon-box"><i class="fa fa-music"></i></div>
+                            <h4>Music</h4>
+                            <!-- <p>Cultivating vocal harmony, rhythm awareness, appreciation of diverse musical styles, and joyful auditory performance.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 10. Dance -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">10</span>
+                            <div class="icon-box"><i class="fa fa-child"></i></div>
+                            <h4>Dance</h4>
+                            <!-- <p>Developing physical rhythm, body coordination, cultural dance techniques, poise, and expressive performance confidence.</p> -->
+                        </div>
+                    </div>
+
+                    <!-- 11. Physical Education -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="subject-card-box">
+                            <span class="subject-number">11</span>
+                            <div class="icon-box"><i class="fa fa-trophy"></i></div>
+                            <h4>Physical Education</h4>
+                            <!-- <p>Building stamina, team spirit, sportsmanship, physical fitness routines, and healthy athletic discipline through indoor and outdoor sports.</p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download & Inquiry Banner Box -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="curriculum-download-card">
+                            <div>
+                                <h3>Explore Our Grade-Wise Primary &amp; Middle Syllabus</h3>
+                                <!-- <p>Learn more about our teaching methodologies, evaluation system, and academic schedule.</p> -->
+                            </div>
+                            <div>
+                                <a href="contact.html" class="btn-download-syllabus">
+                                    <i class="fa fa-envelope" style="font-size: 18px;"></i> Inquire For Admissionss
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--End Main Content Section-->
+
+        <!--Start Footer Area Style4-->
+        <footer class="footer-area style4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-footer-widget marbtm50-s4">
+                            <div class="our-info-box">
+                                <div class="footer-logo">
+                                    <a href="index.html">
+                                        <img src="images/footer/footer-logo.png"
+                                            alt="Academic Heights Public School Logo">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <p>Academic Heights Public School is dedicated to nurturing curiosity, creativity,
+                                        and leadership in every student, preparing them for academic success and life.
+                                    </p>
+                                </div>
+                                 <div class="follow-us-social-links clearfix">
+                                    <span>Follow Us On:</span>
+                                    <ul>
+                                        <li><a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a></li>
+                                        <li><a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-footer-widget s4">
+                            <div class="title-s4">
+                                <h3>Quick Links</h3>
+                            </div>
+                            <div class="single-footer-link-box clearfix">
+                                <ul class="clearfix">
+                                    <li><a href="about.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>About Us</a></li>
+                                    <li><a href="primary-middle.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>Primary to Middle</a>
+                                    </li>
+                                    <li><a href="curriculum.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>Curriculum</a></li>
+                                    <li><a href="project.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>Admissionss</a></li>
+                                    <li><a href="contact.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                        <div class="single-footer-widget s4">
+                            <div class="title-s4">
+                                <h3>Contact Information</h3>
+                            </div>
+                            <div class="footer-contact-info-s4">
+                                <ul>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-map-marker"></i></div>
+                                        <div class="text">
+                                            <p>Sy No. 46/8, Chikkanekundi, Dommasandra Road, Varthur, Bangalore, India,
+                                                560087</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-phone"></i></div>
+                                        <div class="text">
+                                            <p><a href="tel:+918050065050">+91 8050065050</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-envelope"></i></div>
+                                        <div class="text">
+                                            <p><a
+                                                    href="mailto:Admissionss@ahpsvarthur.com">Admissionss@ahpsvarthur.com</a>
+                                            </p>
+                                            <p><a href="mailto:support@ahpsvarthur.com">support@ahpsvarthur.com</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer Area Style4-->
+
+        <!--Start Footer Bottom Area-->
+        <section class="footer-bottom-area style3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="copyright-text text-center">
+                            <p>© 2026 <a href="index.html">Academic Heights Public School</a>. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Footer Bottom Area-->
+
+    </div>
+
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery.bootstrap-touchspin.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.paroller.min.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/wow.js"></script>
+
+    <!-- thm custom script -->
+    <script src="js/custom.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="http://wa.me/918050065050" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+     <script>
+        $(document).ready(function() {
+            // Dynamically set dropdown option based on clicked button/card
+            $('[data-target="#AdmissionsModal"]').on('click', function() {
+                var selectedGrade = $(this).attr('data-grade');
+                if (selectedGrade) {
+                    $('#modal_applying_for').val(selectedGrade);
+                }
+            });
+
+            // Web3Forms Modal Submission
+            const modalForm = document.getElementById('modal-enquiry-form');
+            const modalResultAlert = document.getElementById('modal-form-result');
+
+            if (modalForm && modalResultAlert) {
+                modalForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(modalForm);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+
+                    modalResultAlert.style.display = "block";
+                    modalResultAlert.style.background = "#eff6ff";
+                    modalResultAlert.style.color = "#1d4ed8";
+                    modalResultAlert.style.border = "1px solid #bfdbfe";
+                    modalResultAlert.innerHTML = "<i class='fa fa-spinner fa-spin'></i> Submitting your enquiry...";
+
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                    .then(async (response) => {
+                        let resJson = await response.json();
+                        if (response.status === 200) {
+                            modalResultAlert.style.background = "#f0fdf4";
+                            modalResultAlert.style.color = "#15803d";
+                            modalResultAlert.style.border = "1px solid #bbf7d0";
+                            modalResultAlert.innerHTML = "<i class='fa fa-check-circle'></i> <strong>Enquiry Submitted!</strong> Thank you. Our Admissionss team will get back to you shortly.";
+                            modalForm.reset();
+                        } else {
+                            modalResultAlert.style.background = "#fef2f2";
+                            modalResultAlert.style.color = "#b91c1c";
+                            modalResultAlert.style.border = "1px solid #fecaca";
+                            modalResultAlert.innerHTML = resJson.message || "Something went wrong. Please try again.";
+                        }
+                    })
+                    .catch(error => {
+                        modalResultAlert.style.background = "#fef2f2";
+                        modalResultAlert.style.color = "#b91c1c";
+                        modalResultAlert.style.border = "1px solid #fecaca";
+                        modalResultAlert.innerHTML = "<i class='fa fa-exclamation-triangle'></i> Submission error. Please check your internet connection.";
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Events &amp; Gallery || Academic Heights Public School</title>
+
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+
+    <!-- Custom Gallery Styling -->
+    <style>
+        .main-menu.style2 .navigation>li>ul {
+            top: 100% !important;
+            margin-top: 0 !important;
+        }
+
+        .main-menu.style2 .navigation>li {
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
+        }
+
+        /* Gallery Filter Buttons */
+        .gallery-filter-btn {
+            background: #ffffff;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 13px;
+            margin: 4px 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .gallery-filter-btn:hover,
+        .gallery-filter-btn.active {
+            background: #d41919;
+            color: #ffffff;
+            border-color: #d41919;
+            box-shadow: 0 6px 18px rgba(212, 25, 25, 0.25);
+        }
+
+        /* Gallery Card Item */
+        .gallery-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f5f9;
+            margin-bottom: 30px;
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: block;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(212, 25, 25, 0.2);
+            border-color: #d41919;
+        }
+
+        .gallery-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4 / 3;
+            background: #f8fafc;
+            border-radius: 16px;
+        }
+
+        .gallery-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+
+        .gallery-card:hover .gallery-img-wrapper img {
+            transform: scale(1.08);
+        }
+
+        .gallery-img-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .gallery-card:hover .gallery-img-overlay {
+            opacity: 1;
+        }
+
+        .gallery-tag {
+            display: inline-block;
+            background: #d41919;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 767px) {
+            .gallery-filter-btn {
+                padding: 6px 14px;
+                font-size: 12px;
+                margin: 3px 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxed_wrapper">
+
+        <div class="preloader"></div>
+
+        <section class="top-bar-style2">
+            <div class="top-style2">
+                <div class="top-style2-left">
+                    <ul>
+                        <li>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+918050065050">+91 8050065050</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:support@ahpsvarthur.com">support@ahpsvarthur.com</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            Mon - Sat: 08:00 AM to 04:30 PM
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-style2-right">
+                    <ul class="topbar-social-links">
+                        <li><a href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--Start Main Header-->
+        <header class="main-header header-style2 stricky">
+            <div class="inner-container clearfix">
+                <div class="logo-box-style2 float-left">
+                    <a href="index.html">
+                        <img src="images/brand/logo.png" alt="Academic Heights Public School Logo">
+                    </a>
+                </div>
+                <div class="main-menu-box float-right">
+                    <nav class="main-menu style2 clearfix">
+                        <div class="navbar-header clearfix">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="dropdown"><a href="javascript:void(0)">About Us</a>
+                                    <ul>
+                                        <li><a href="our-story.html">Our Story</a></li>
+                                        <li><a href="vision-mission.html">Vision & Mission</a></li>
+                                        <li><a href="leadership.html">Leadership</a></li>
+                                        <li><a href="our-team.html">Our Team</a></li>
+                                        <li><a href="testimonials.html">Testimonial</a></li>
+                                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                                        <li><a href="transport.html">Transport</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="academic.html">Academics</a>
+                                    <ul>
+                                        <li><a href="academic.html">Academics Overview</a></li>
+                                        <li><a href="curriculum.html">Curriculum</a></li>
+                                        <li><a href="primary-middle.html">Primary to Middle</a></li>
+                                        <li><a href="co-curriculum.html">Co-Curriculum</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="Admissions-process.html">Admissions</a>
+                                    <ul>
+                                        <li><a href="Admissions-process.html">Admissions Process</a></li>
+                                    </ul>
+                                </li>
+                                <li class="current"><a href="events-gallery.html">Events &amp; Gallery</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="https://mauranipur.academicheights.in/mandatorypublicdisclosure/"
+                                        target="_blank">Public Mandatory Disclosure</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!--End Main Header-->
+
+        <!--Start Admissions Attention Bar-->
+        <div class="Admissions-attention-bar">
+            <div class="container">
+                <div class="attention-content">
+                    <span class="attention-badge"><span class="pulse-dot"></span> Admissions OPEN</span>
+                    <span class="attention-text">🎓 <strong>Admissions Open For 2026-2027 Batch</strong> &mdash; Enroll
+                        Your Child for Academic Excellence!</span>
+                    <a href="javascript:void(0)" class="attention-btn" data-toggle="modal"
+                        data-target="#AdmissionsModal" data-grade="Grade I Onwards">
+                        Apply Now <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--End Admissions Attention Bar-->
+
+        <!-- Admissions Enquiry Modal -->
+        <div class="modal fade" id="AdmissionsModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="modal-close-top" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <div class="modal-body">
+                        <!-- Header with Brand Logo -->
+                        <div class="modal-header-box">
+                            <img src="images/brand/logo.png" alt="AHPS Logo">
+                            <div class="modal-header-title">
+                                <h3>Admissions Enquiry Form</h3>
+                                <p>Begin Your Child's Learning Journey</p>
+                            </div>
+                        </div>
+
+                        <!-- Alert Box for Web3Forms Status -->
+                        <div id="modal-form-result"
+                            style="display: none; margin-bottom: 15px; padding: 10px 14px; border-radius: 8px; font-size: 13px;">
+                        </div>
+
+                        <form id="modal-enquiry-form" action="https://api.web3forms.com/submit" method="POST">
+
+                            <!-- Web3Forms Config -->
+                            <input type="hidden" name="access_key" value="29251925-a4be-44f5-906a-75ad8849fe10">
+                            <input type="hidden" name="subject"
+                                value="New Admissions Enquiry (Apply Now) - Academic Heights Public School">
+                            <input type="hidden" name="from_name" value="AHPS Admissions Portal">
+                            <input type="checkbox" name="botcheck" style="display: none;">
+
+                            <!-- Student Details -->
+                            <div class="form-section-title"><i class="fa fa-user"></i> Student Details</div>
+                            <div class="row">
+                                <div class="col-sm-6 col-12">
+                                    <div class="modal-form-group">
+                                        <label>Student Name *</label>
+                                        <i class="fa fa-user modal-icon"></i>
+                                        <input type="text" name="student_name" placeholder="Enter student full name"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12">
+                                    <div class="modal-form-group">
+                                        <label>Date of Birth *</label>
+                                        <i class="fa fa-calendar modal-icon"></i>
+                                        <input type="text" name="dob" placeholder="DD / MM / YYYY"
+                                            onfocus="(this.type='date')" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12">
+                                    <div class="modal-form-group">
+                                        <label>Gender *</label>
+                                        <div class="radio-group">
+                                            <label><input type="radio" name="gender" value="Male" required> Male</label>
+                                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                                            <label><input type="radio" name="gender" value="Other"> Other</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12">
+                                    <div class="modal-form-group">
+                                        <label>Applying For *</label>
+                                        <select name="modal_applying_for" id="modal_applying_for" required>
+                                            <option value="" disabled selected>Select Class</option>
+                                            <option value="Nursery">Nursery</option>
+                                            <option value="LKG">LKG</option>
+                                            <option value="UKG">UKG</option>
+                                            <option value="Grade I Onwards">Grade I Onwards</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Parent / Guardian Details -->
+                            <div class="form-section-title"><i class="fa fa-users"></i> Parent / Guardian Details</div>
+                            <div class="row">
+                                <div class="col-sm-6 col-12">
+                                    <div class="modal-form-group">
+                                        <label>Parent / Guardian Name *</label>
+                                        <i class="fa fa-user modal-icon"></i>
+                                        <input type="text" name="parent_name" placeholder="Enter parent/guardian name"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12">
+                                    <div class="modal-form-group">
+                                        <label>Mobile Number *</label>
+                                        <i class="fa fa-phone modal-icon"></i>
+                                        <input type="tel" name="phone" placeholder="Enter mobile number" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="modal-form-group">
+                                        <label>Email Address</label>
+                                        <i class="fa fa-envelope modal-icon"></i>
+                                        <input type="email" name="email" placeholder="Enter email address">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="form-section-title"><i class="fa fa-map-marker"></i> Address</div>
+                            <div class="row">
+                                <div class="col-sm-4 col-12">
+                                    <div class="modal-form-group">
+                                        <label>City *</label>
+                                        <i class="fa fa-map-marker modal-icon"></i>
+                                        <input type="text" name="city" placeholder="Enter city" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-12">
+                                    <div class="modal-form-group">
+                                        <label>State *</label>
+                                        <select name="state" required>
+                                            <option value="" disabled selected>Select state</option>
+                                            <option value="Karnataka">Karnataka</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-12">
+                                    <div class="modal-form-group">
+                                        <label>Pincode</label>
+                                        <i class="fa fa-map-pin modal-icon"></i>
+                                        <input type="text" name="pincode" placeholder="Enter pincode">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Information -->
+                            <div class="form-section-title"><i class="fa fa-info-circle"></i> Additional Information
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 col-12">
+                                    <div class="modal-form-group">
+                                        <label>Previous School</label>
+                                        <i class="fa fa-university modal-icon"></i>
+                                        <input type="text" name="previous_school"
+                                            placeholder="Enter previous school name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12">
+                                    <div class="modal-form-group">
+                                        <label>Message / Query</label>
+                                        <i class="fa fa-pencil modal-icon"></i>
+                                        <textarea name="message" rows="1"
+                                            placeholder="Write your message..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Terms Checkbox -->
+                            <div style="margin-top: 10px;">
+                                <label style="font-size: 12px; color: #64748b; font-weight: 400; cursor: pointer;">
+                                    <input type="checkbox" required checked> I agree to be contacted by Academic Heights
+                                    Public School regarding Admissions.
+                                </label>
+                            </div>
+
+                            <!-- Submit & Cancel Buttons -->
+                            <div class="modal-actions">
+                                <button type="submit" class="btn-submit-modal">Submit Application <i
+                                        class="fa fa-arrow-right"></i></button>
+                                <button type="button" class="btn-cancel-modal" data-dismiss="modal">Cancel</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Start breadcrumb area-->
+        <section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="inner-content clearfix">
+                            <div class="title">
+                                <h1>Events &amp; Gallery</h1>
+                            </div>
+                            <div class="breadcrumb-menu float-right">
+                                <ul class="clearfix">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li class="active">Events &amp; Gallery</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End breadcrumb area-->
+
+        <!--Start Events & Gallery Main Section-->
+        <section style="padding: 80px 0 90px; background: #ffffff;">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="sec-title text-center" style="margin-bottom: 40px;">
+                    <p
+                        style="display: inline-block; background-color: #d41919; color: #ffffff; padding: 6px 18px; border-radius: 6px; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(212, 25, 25, 0.25);">
+                        Life at Academic Heights
+                    </p>
+                    <div class="title" style="font-size: 38px; line-height: 48px; font-weight: 800; color: #1a1a1a;">
+                        Events &amp; <span style="color: #d41919;">Gallery</span>
+                    </div>
+                    <!-- Added Academic Year Subtitle -->
+                    <div
+                        style="font-size: 18px; font-weight: 700; color: #64748b; margin-top: 8px; letter-spacing: 0.5px;">
+                        Academic Session <span style="color: #d41919;">2025–26</span>
+                    </div>
+                </div>
+
+                <!-- Filter Category Tabs (Clean & Refined List) -->
+                <div class="text-center" style="margin-bottom: 45px;">
+                    <button class="gallery-filter-btn" onclick="filterGallery('assembly', event)">Assembly</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('campus-connect', event)">Campus
+                        Connect</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('childrens-day', event)">Children’s
+                        Day</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('christmas', event)">Christmas</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('color-days', event)">color Days</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('field-trips', event)">Field
+                        Trips</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('graduation-day', event)">Graduation
+                        Day</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('life-skills', event)">Life Skills
+                        Sessions</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('parents-day', event)">Parents
+                        Day</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('performing-arts', event)">Performing
+                        Arts</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('pre-primary-special', event)">Pre-Primary
+                        Special Days</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('indoor-games', event)">Indoor
+                        Games</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('outdoor-games', event)">Outdoor
+                        Games</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('sports-day', event)">Sports Day</button>
+                    <button class="gallery-filter-btn" onclick="filterGallery('teachers-engagements', event)">Teachers’
+                        Engagements</button>
+                </div>
+
+                <!-- Gallery Item Grid (2 Cards per Category) -->
+                <div class="row" id="gallery-grid">
+
+                    <!-- 1. Assembly -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item assembly">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/assembly.jpeg" alt="Morning Assembly Gathering">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Assembly</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item assembly">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/assembly1.jpeg" alt="Student Assembly Presentation">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Assembly</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Campus Connect -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item campus-connect">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/campus1.jpeg" alt="Campus Connect Activity">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Campus Connect</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item campus-connect">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/campus2.jpeg" alt="Interactive Campus Workshop">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Campus Connect</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item campus-connect">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/campus3.jpeg" alt="Interactive Campus Workshop">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Campus Connect</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Children's Day -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item childrens-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/children (1).jpeg" alt="Children's Day Fun">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Children’s Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item childrens-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/children (2).jpeg" alt="Children's Day Stage Program">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Children’s Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Christmas -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item christmas">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/christmas.jpeg" alt="Christmas Celebration">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Christmas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item christmas">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/christmas1.jpeg" alt="Christmas Carol Performance">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Christmas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item christmas">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/christmas2.jpeg" alt="Christmas Carol Performance">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Christmas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. color Days -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item color-days">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/color1.jpeg" alt="color Days Theme Activity">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">color Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item color-days">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/color2.jpeg" alt="Vibrant color Day Display">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">color Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 7. Field Trips -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item field-trips">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/field1.jpeg" alt="Outdoor Field Trip">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Field Trips</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item field-trips">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/field2.jpeg" alt="Educational Field Exploration">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Field Trips</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item field-trips">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/field3.jpeg" alt="Educational Field Exploration">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Field Trips</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Graduation Day -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item graduation-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/graduation.jpeg" alt="Graduation Day Honors">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Graduation Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item graduation-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/graduation1.jpeg" alt="Graduation Ceremony">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Graduation Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item graduation-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/graduation2.jpeg" alt="Graduation Ceremony">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Graduation Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Life Skills Sessions -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item life-skills">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/lifeskills (1).jpeg" alt="Practical Life Skills Class">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Life Skills Sessions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item life-skills">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/lifeskills (2).jpeg" alt="Interactive Life Skill Training">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Life Skills Sessions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item life-skills">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/lifeskills (3).jpeg" alt="Interactive Life Skill Training">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Life Skills Sessions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10. Parents Day -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item parents-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/parents_day (1).jpeg" alt="Parents Day Interaction">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Parents Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item parents-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/parents_day (2).jpeg" alt="Parents Day Celebration">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Parents Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item parents-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/parents_day (3).jpeg" alt="Parents Day Celebration">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Parents Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item parents-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/parents_day (4).jpeg" alt="Parents Day Celebration">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Parents Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item parents-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/parents_day (5).jpeg" alt="Parents Day Celebration">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Parents Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 11. Performing Arts -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item performing-arts">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/performing_art (1).jpeg" alt="Stage Performing Arts Show">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Performing Arts</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item performing-arts">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/performing_art (2).jpeg" alt="Music and Drama Performance">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Performing Arts</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item performing-arts">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/performing_art (3).jpeg" alt="Music and Drama Performance">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Performing Arts</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 12. Pre-Primary Special Days -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item pre-primary-special">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/primary (1).jpeg" alt="Pre-Primary Special Day">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Pre-Primary Special Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item pre-primary-special">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/primary (2).jpeg" alt="Pre-Primary Activity Day">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Pre-Primary Special Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item pre-primary-special">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/primary (3).jpeg" alt="Pre-Primary Activity Day">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Pre-Primary Special Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item pre-primary-special">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/primary (4).jpeg" alt="Pre-Primary Activity Day">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Pre-Primary Special Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 13. Indoor Games -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item indoor-games">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/Indoor.jpeg" alt="Indoor Games Complex">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Indoor Games</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item indoor-games">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/chess1.jpeg" alt="Chess Match Indoor Game">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Indoor Games</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 14. Outdoor Games -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item outdoor-games">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/sports.jpeg" alt="Outdoor Athletic Sports">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Outdoor Games</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item outdoor-games">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/outdoor1.jpeg" alt="Outdoor Basketball Play">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Outdoor Games</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 15. Sports Day -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item sports-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/sports1.jpeg" alt="Annual Sports Day Parade">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Sports Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item sports-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/sports2.jpeg" alt="Sports Day Running Event">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Sports Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item sports-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/sports3.jpeg" alt="Annual Sports Day Parade">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Sports Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item sports-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/sports4.jpeg" alt="Sports Day Running Event">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Sports Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item sports-day">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/sports5.jpeg" alt="Annual Sports Day Parade">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Sports Day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 16. Teachers' Engagements -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item teachers-engagements">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/teacher_engement (1).jpeg" alt="Teachers Workshop">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Teachers’ Engagements</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item teachers-engagements">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/teacher_engement (2).jpeg" alt="Faculty Development Session">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Teachers’ Engagements</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 gallery-item teachers-engagements">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="images/projects/teacher_engement (3).jpeg" alt="Faculty Development Session">
+                                <div class="gallery-img-overlay">
+                                    <span class="gallery-tag">Teachers’ Engagements</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--End Events & Gallery Main Section-->
+
+        <!--Start Footer Area Style4-->
+        <footer class="footer-area style4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-footer-widget marbtm50-s4">
+                            <div class="our-info-box">
+                                <div class="footer-logo">
+                                    <a href="index.html">
+                                        <img src="images/footer/footer-logo.png"
+                                            alt="Academic Heights Public School Logo">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <p>Academic Heights Public School is dedicated to nurturing curiosity, creativity,
+                                        and leadership in every student, preparing them for academic success and life.
+                                    </p>
+                                </div>
+                                <div class="follow-us-social-links clearfix">
+                                    <span>Follow Us On:</span>
+                                    <ul
+                                        style="list-style: none; padding: 0; display: inline-flex; gap: 10px; align-items: center;">
+                                        <li><a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-footer-widget s4">
+                            <div class="title-s4">
+                                <h3>Quick Links</h3>
+                            </div>
+                            <div class="single-footer-link-box clearfix">
+                                <ul class="clearfix">
+                                    <li><a href="about.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #d41919;"></i>About Us</a></li>
+                                    <li><a href="curriculum.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #d41919;"></i>Academics</a></li>
+                                    <li><a href="Admissions-process.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #d41919;"></i>Admissions</a></li>
+                                    <li><a href="events-gallery.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #d41919;"></i>Events &amp; Gallery</a>
+                                    </li>
+                                    <li><a href="contact.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #d41919;"></i>Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                        <div class="single-footer-widget s4">
+                            <div class="title-s4">
+                                <h3>Contact Information</h3>
+                            </div>
+                            <div class="footer-contact-info-s4">
+                                <ul>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-map-marker"></i></div>
+                                        <div class="text">
+                                            <p>Sy No. 46/8, Chikkanekundi, Dommasandra Road, Varthur, Bangalore, India,
+                                                560087</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-phone"></i></div>
+                                        <div class="text">
+                                            <p><a href="tel:+918050065050">+91 8050065050</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-envelope"></i></div>
+                                        <div class="text">
+                                            <p><a
+                                                    href="mailto:Admissionss@ahpsvarthur.com">Admissionss@ahpsvarthur.com</a>
+                                            </p>
+                                            <p><a href="mailto:support@ahpsvarthur.com">support@ahpsvarthur.com</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer Area Style4-->
+
+        <!--Start Footer Bottom Area-->
+        <section class="footer-bottom-area style3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="copyright-text text-center">
+                            <p>© 2026 <a href="index.html">Academic Heights Public School</a>. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Footer Bottom Area-->
+
+    </div>
+
+    <!-- Scroll Top Button -->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="http://wa.me/918050065050" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <!-- Unified Gallery Filtering & Form Handler Script -->
+    <script>
+        function filterGallery(category, e) {
+            // Update button active states
+            const buttons = document.querySelectorAll('.gallery-filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            if (e && e.target) {
+                e.target.classList.add('active');
+            } else if (window.event && window.event.target) {
+                window.event.target.classList.add('active');
+            }
+
+            // Show or Hide Gallery Items
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            // Dynamically set dropdown option based on clicked button/card
+            $('[data-target="#AdmissionsModal"]').on('click', function () {
+                var selectedGrade = $(this).attr('data-grade');
+                if (selectedGrade) {
+                    $('#modal_applying_for').val(selectedGrade);
+                }
+            });
+
+            // Web3Forms Modal Submission
+            const modalForm = document.getElementById('modal-enquiry-form');
+            const modalResultAlert = document.getElementById('modal-form-result');
+
+            if (modalForm && modalResultAlert) {
+                modalForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const formData = new FormData(modalForm);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+
+                    modalResultAlert.style.display = "block";
+                    modalResultAlert.style.background = "#eff6ff";
+                    modalResultAlert.style.color = "#1d4ed8";
+                    modalResultAlert.style.border = "1px solid #bfdbfe";
+                    modalResultAlert.innerHTML = "<i class='fa fa-spinner fa-spin'></i> Submitting your enquiry...";
+
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                        .then(async (response) => {
+                            let resJson = await response.json();
+                            if (response.status === 200) {
+                                modalResultAlert.style.background = "#f0fdf4";
+                                modalResultAlert.style.color = "#15803d";
+                                modalResultAlert.style.border = "1px solid #bbf7d0";
+                                modalResultAlert.innerHTML = "<i class='fa fa-check-circle'></i> <strong>Enquiry Submitted!</strong> Thank you. Our Admissions team will get back to you shortly.";
+                                modalForm.reset();
+                            } else {
+                                modalResultAlert.style.background = "#fef2f2";
+                                modalResultAlert.style.color = "#b91c1c";
+                                modalResultAlert.style.border = "1px solid #fecaca";
+                                modalResultAlert.innerHTML = resJson.message || "Something went wrong. Please try again.";
+                            }
+                        })
+                        .catch(error => {
+                            modalResultAlert.style.background = "#fef2f2";
+                            modalResultAlert.style.color = "#b91c1c";
+                            modalResultAlert.style.border = "1px solid #fecaca";
+                            modalResultAlert.innerHTML = "<i class='fa fa-exclamation-triangle'></i> Submission error. Please check your internet connection.";
+                        });
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home || Academic Heights Public School</title>
+
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <!-- Google Fonts for Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Montserrat:wght@800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- Fix Underline & Outer Line Glitches --- */
+        .main-slider .btn-box,
+        .main-slider .btn-box::before,
+        .main-slider .btn-box::after,
+        .main-slider .slide-content::before,
+        .main-slider .slide-content::after {
+            display: none !important;
+            border: none !important;
+            background: none !important;
+        }
+
+        /* --- Premium Typography Design --- */
+        .main-slider .big-title {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 50px !important;
+            line-height: 1.15 !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px !important;
+        }
+
+        .main-slider .big-title span.highlight-text {
+            color: #F78F1E !important;
+        }
+
+        /* --- Slider Banner Typography --- */
+
+        /* Small gray "WELCOME TO" header */
+        .slider-welcome-text {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 16px !important;
+            font-weight: 800 !important;
+            color: #64748b !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2.5px !important;
+            margin-bottom: 6px !important;
+            line-height: 1 !important;
+        }
+
+        /* Playful main orange title */
+        .slider-brand-text {
+            font-family: 'Fredoka', cursive, sans-serif !important;
+            font-size: 82px !important;
+            font-weight: 700 !important;
+            color: #f78f1e !important;
+            text-transform: uppercase !important;
+            line-height: 1 !important;
+            letter-spacing: 1px !important;
+            text-shadow: 4px 5px 0px #1e293b, 6px 7px 10px rgba(0, 0, 0, 0.15);
+            margin-bottom: 14px !important;
+        }
+
+        /* Bold black tagline */
+        .slider-sub-text {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 26px !important;
+            font-weight: 900 !important;
+            color: #0f172a !important;
+            line-height: 1.3 !important;
+            letter-spacing: -0.2px !important;
+        }
+
+        /* Responsive Scaling */
+        @media (max-width: 767px) {
+            .slider-welcome-text {
+                font-size: 13px !important;
+                letter-spacing: 1.5px !important;
+            }
+
+            .slider-brand-text {
+                font-size: 46px !important;
+                text-shadow: 2px 3px 0px #1e293b;
+            }
+
+            .slider-sub-text {
+                font-size: 18px !important;
+            }
+        }
+
+        .main-slider .slide-content .text {
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            line-height: 1.5 !important;
+            color: rgba(255, 255, 255, 0.85) !important;
+            letter-spacing: 0.3px;
+            margin-bottom: 20px !important;
+        }
+
+        /* --- Compact Modern Button Design --- */
+        .main-slider a.slide-style2-button {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            padding: 10px 24px !important;
+            height: auto !important;
+            line-height: 1.2 !important;
+            background-color: #F78F1E !important;
+            color: #ffffff !important;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            border-radius: 6px !important;
+            border: none !important;
+            text-decoration: none !important;
+            text-transform: capitalize !important;
+            box-shadow: 0 4px 12px rgba(247, 143, 30, 0.3) !important;
+            transition: all 300ms ease !important;
+        }
+
+        /* Hover State */
+        .main-slider a.slide-style2-button:hover {
+            background-color: #fc0505 !important;
+            box-shadow: 0 6px 16px rgba(252, 5, 5, 0.35) !important;
+            transform: translateY(-2px);
+        }
+
+        /* --- Why Choose Us Section Styles --- */
+        .why-choose-us-area {
+            padding: 80px 0 50px;
+            background-color: #f8fafc;
+            position: relative;
+        }
+
+        .why-choose-us-area .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .why-choose-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 3px solid transparent;
+            height: calc(100% - 30px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .why-choose-card:hover {
+            background: #fc0505 !important;
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(252, 5, 5, 0.35) !important;
+            border-bottom-color: #fcc142 !important;
+        }
+
+        .why-choose-card .icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(252, 5, 5, 0.1);
+            color: #fc0505;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .why-choose-card:hover .icon-box {
+            background: #ffffff !important;
+            color: #fc0505 !important;
+            transform: scale(1.08);
+        }
+
+        .why-choose-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 0;
+            line-height: 1.45;
+            transition: color 0.3s ease;
+        }
+
+        .why-choose-card:hover h4 {
+            color: #ffffff !important;
+        }
+
+        @media (max-width: 767px) {
+            .main-slider .tp-caption {
+                white-space: normal !important;
+                width: 95% !important;
+                left: 2.5% !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+
+            .main-slider .big-title {
+                font-size: 22px !important;
+                line-height: 1.25 !important;
+                margin-bottom: 8px !important;
+                letter-spacing: 0px !important;
+            }
+
+            .main-slider .big-title span.highlight-text {
+                font-size: 22px !important;
+                display: inline-block;
+            }
+
+            .main-slider .slide-content .text {
+                font-size: 13px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 12px !important;
+            }
+
+            .main-slider a.slide-style2-button {
+                padding: 8px 18px !important;
+                font-size: 12px !important;
+                border-radius: 4px !important;
+            }
+
+            .logo-box-style2 img {
+                max-height: 45px !important;
+                width: auto !important;
+            }
+
+            .why-choose-us-area {
+                padding: 45px 0 25px;
+            }
+
+            .why-choose-card {
+                padding: 18px 14px;
+                margin-bottom: 15px;
+                height: auto;
+            }
+
+            .why-choose-card .icon-box {
+                width: 48px;
+                height: 48px;
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+
+            .why-choose-card h4 {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxed_wrapper">
+
+        <div class="preloader"></div>
+
+        <section class="top-bar-style2">
+            <div class="top-style2">
+                <div class="top-style2-left">
+                    <ul>
+                        <li>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+918050065050">+91 8050065050</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:support@ahpsvarthur.com">support@ahpsvarthur.com</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            Mon - Sat: 08:00 AM to 04:30 PM
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-style2-right">
+                    <ul class="topbar-social-links">
+                        <li><a href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--Start Main Header-->
+        <header class="main-header header-style2 stricky">
+            <div class="inner-container clearfix">
+                <div class="logo-box-style2 float-left">
+                    <a href="index.html">
+                        <img src="images/brand/logo.png" alt="Academic Heights Public School Logo">
+                    </a>
+                </div>
+                <div class="main-menu-box float-right">
+                    <nav class="main-menu style2 clearfix">
+                        <div class="navbar-header clearfix">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <li class="current"><a href="index.html">Home</a></li>
+                                <li class="dropdown"><a href="javascript:void(0)">About Us</a>
+                                    <ul>
+                                        <li><a href="our-story.html">Our Story</a></li>
+                                        <li><a href="vision-mission.html">Vision & Mission</a></li>
+                                        <li><a href="leadership.html">Leadership</a></li>
+                                        <li><a href="our-team.html">Our Team</a></li>
+                                        <li><a href="testimonials.html">Testimonial</a></li>
+                                        <li class="current"><a href="infrastructure.html">Infrastructure</a></li>
+                                        <li><a href="transport.html">Transport</a></li>
+                                        <li><a href="https://mauranipur.academicheights.in/mandatorypublicdisclosure/"
+                                                target="_blank">Public Mandatory Disclosure</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="academic.html">Academics</a>
+                                    <ul>
+                                        <li><a href="academic.html">Academics Overview</a></li>
+                                        <li><a href="curriculum.html">Curriculum</a></li>
+                                        <li><a href="primary-middle.html">Primary to Middle</a></li>
+                                        <li><a href="co-curriculum.html">Co-Curriculum</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="Admissions-process.html">Admissionss</a>
+                                    <ul>
+                                        <li><a href="Admissions-process.html">Admissions Process</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="events-gallery.html">Events &amp; Gallery</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!--End Main Header-->
+
+        <!--Start Admissions Attention Bar-->
+        <div class="Admissions-attention-bar">
+            <div class="container">
+                <div class="attention-content">
+                    <span class="attention-badge"><span class="pulse-dot"></span> AdmissionsS OPEN</span>
+                    <span class="attention-text">🎓 <strong>Admissionss Open For 2026-2027 Batch</strong> &mdash; Enroll
+                        Your Child for Academic Excellence!</span>
+                    <a href="javascript:void(0)" class="attention-btn" data-toggle="modal"
+                        data-target="#AdmissionsModal" data-grade="Grade I Onwards">
+                        Apply Now <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--End Admissions Attention Bar-->
+
+        <!--Main Slider-->
+        <section class="main-slider style2">
+            <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
+                <div class="rev_slider fullwidthabanner" id="rev_slider_two" data-version="5.4.1">
+                    <ul>
+
+                        <!-- SLIDE 1: WELCOME -->
+                        <li data-description="AHPS Varthur Banner" data-easein="default" data-easeout="default"
+                            data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade"
+                            data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689"
+                            data-masterspeed="default" data-rotate="0" data-saveperformance="off"
+                            data-slotamount="default" data-thumb="images/home-pages/hero.png" data-title="Welcome"
+                            data-transition="parallaxvertical">
+
+                            <img alt="Academic Heights Campus" class="rev-slidebg" data-bgfit="cover"
+                                data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat"
+                                data-no-retina="" src="images/home-pages/hero.jpeg">
+
+                            <!-- COMBINED ALL-IN-ONE LAYER -->
+                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+                                data-type="text" data-height="none" data-width="['850','750','600','380']"
+                                data-whitespace="normal" data-hoffset="['30','30','20','15']"
+                                data-voffset="['0','0','0','0']" data-x="['left','left','left','left']"
+                                data-y="['middle','middle','middle','middle']"
+                                data-textalign="['left','left','left','left']"
+                                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":800,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                                style="z-index: 7;">
+
+
+
+                            </div>
+                        </li>
+
+                        <!-- SLIDE 2: ACADEMIC EXCELLENCE -->
+                        <li data-description="Academic Excellence" data-easein="default" data-easeout="default"
+                            data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade"
+                            data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1690"
+                            data-masterspeed="default" data-rotate="0" data-saveperformance="off"
+                            data-slotamount="default" data-thumb="images/home-pages/hero3.png" data-title="Academics"
+                            data-transition="parallaxvertical">
+
+                            <img alt="Academic Excellence" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10"
+                                data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""
+                                src="images/home-pages/hero3.jpeg">
+
+                            <!-- COMBINED ALL-IN-ONE LAYER -->
+                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+                                data-type="text" data-height="none" data-width="['850','750','600','380']"
+                                data-whitespace="normal" data-hoffset="['30','30','20','15']"
+                                data-voffset="['0','0','0','0']" data-x="['left','left','left','left']"
+                                data-y="['middle','middle','middle','middle']"
+                                data-textalign="['left','left','left','left']"
+                                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":800,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                                style="z-index: 7;">
+
+
+                            </div>
+                        </li>
+
+                        <!-- SLIDE 3: MODERN INFRASTRUCTURE -->
+                        <li data-description="Modern Campus Infrastructure" data-easein="default" data-easeout="default"
+                            data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade"
+                            data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1691"
+                            data-masterspeed="default" data-rotate="0" data-saveperformance="off"
+                            data-slotamount="default" data-thumb="images/home-pages/hero4.png" data-title="Campus Life"
+                            data-transition="parallaxvertical">
+
+                            <img alt="Modern Campus Infrastructure" class="rev-slidebg" data-bgfit="cover"
+                                data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat"
+                                data-no-retina="" src="images/home-pages/hero4.jpeg">
+
+                            <!-- COMBINED ALL-IN-ONE LAYER -->
+                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+                                data-type="text" data-height="none" data-width="['850','750','600','380']"
+                                data-whitespace="normal" data-hoffset="['30','30','20','15']"
+                                data-voffset="['0','0','0','0']" data-x="['left','left','left','left']"
+                                data-y="['middle','middle','middle','middle']"
+                                data-textalign="['left','left','left','left']"
+                                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":800,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                                style="z-index: 7;">
+
+                            </div>
+                        </li>
+
+                        <!-- SLIDE 4: AdmissionsS OPEN -->
+                        <li data-description="Admissionss Open" data-easein="default" data-easeout="default"
+                            data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade"
+                            data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1692"
+                            data-masterspeed="default" data-rotate="0" data-saveperformance="off"
+                            data-slotamount="default" data-thumb="images/home-pages/hero5.png" data-title="Admissionss"
+                            data-transition="parallaxvertical">
+
+                            <img alt="Admissionss Open" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10"
+                                data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""
+                                src="images/home-pages/hero5.jpeg">
+
+                            <!-- COMBINED ALL-IN-ONE LAYER -->
+                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+                                data-type="text" data-height="none" data-width="['850','750','600','380']"
+                                data-whitespace="normal" data-hoffset="['30','30','20','15']"
+                                data-voffset="['0','0','0','0']" data-x="['left','left','left','left']"
+                                data-y="['middle','middle','middle','middle']"
+                                data-textalign="['left','left','left','left']"
+                                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":800,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                                style="z-index: 7;">
+
+
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--End Main Slider-->
+
+        <!-- Start About Style2 Area -->
+        <section class="about-style2-area" style="padding: 60px 0;">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <!-- Left Text Section -->
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about-style2-text">
+                            <div class="sec-title">
+                                <p
+                                    style="display: inline-block; background-color: #d41919; color: #ffffff; padding: 6px 18px; border-radius: 6px; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(212, 25, 25, 0.25);">
+                                    Welcome to Academic Heights Public School - Varthur
+                                </p>
+                                <div class="title"
+                                    style="font-size: 32px; font-weight: 800; line-height: 1.3; color: #1e293b; margin-bottom: 15px;">
+                                    Where Every Child <span style="color: #d41919;">Learns, Grows, and Shines</span>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <p style="font-size: 16px; line-height: 1.7; color: #475569; margin-bottom: 15px;">
+                                    At Academic Heights Public School (AHPS) Varthur, we nurture confident learners and
+                                    global citizens through a safe, stimulating curriculum. Our campus features modern
+                                    smart classrooms, robotics training, expansive sports grounds, and a swimming pool.
+                                </p>
+                                <p style="font-size: 15px; line-height: 1.7; color: #475569; margin-bottom: 25px;">
+                                    We actively foster creativity through events like our Art Contest celebrations,
+                                    giving students opportunities to excel academically and express their artistic
+                                    talents.
+                                </p>
+                            </div>
+
+                            <!-- Admissions Open Callout Banner -->
+                            <div class="Admissionss-highlight-card"
+                                style="background: #d41919; padding: 22px 25px; border-radius: 12px; margin: 25px 0 30px; border-left: 6px solid #F78F1E; box-shadow: 0 8px 20px rgba(212, 25, 25, 0.2);">
+                                <span
+                                    style="background: #F78F1E; color: #ffffff; font-size: 11px; font-weight: 700; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; letter-spacing: 1px; display: inline-block; margin-bottom: 10px;">
+                                    Admissions Announcement
+                                </span>
+                                <h4
+                                    style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 6px; font-family: 'Montserrat', sans-serif;">
+                                    Admissions Open for Academic Year 2026–27
+                                </h4>
+                                <p style="color: #e2e8f0; font-size: 15px; margin: 0 0 6px 0; font-weight: 600;">
+                                    <i class="fa fa-graduation-cap" style="color: #F78F1E; margin-right: 8px;"></i>
+                                    Syllabus: Pre-Primary to Grade 7
+                                </p>
+                                <p style="color: #cbd5e1; font-size: 13px; margin: 0; font-weight: 500;">
+                                    <i class="fa fa-map-marker" style="color: #F78F1E; margin-right: 8px;"></i> Varthur,
+                                    Bengaluru | <i class="fa fa-phone" style="color: #F78F1E; margin: 0 4px 0 8px;"></i>
+                                    +91 8050065050
+                                </p>
+                            </div>
+
+                            <div class="button">
+                                <a class="btn-one" href="about.html"
+                                    style="display: inline-flex; align-items: center; gap: 8px; background-color: #d41919; color: #ffffff; padding: 12px 28px; border-radius: 12px; font-weight: 700; font-size: 14px; text-decoration: none; border: 2px solid #d41919; box-shadow: 0 4px 12px rgba(212, 25, 25, 0.25); transition: all 0.3s ease;">
+                                    Explore Our Story <span class="flaticon-next"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Animated Image Stack -->
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about-image-wrapper" id="aboutAnimContainer"
+                            style="position: relative; padding: 0 40px 50px 0; max-width: 520px; margin: 0 auto; overflow: visible;">
+
+                            <!-- Main Background Image -->
+                            <div id="mainCampusImg" class="main-image-box"
+                                style="position: relative; z-index: 1; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.12); border: 4px solid #ffffff;">
+                                <img src="images/home-pages/about.png" alt="AHPS Varthur Campus"
+                                    style="width: 100%; height: auto; display: block; border-radius: 16px;">
+                            </div>
+
+                            <!-- Floating Video Card -->
+                            <div id="floatingVideoCard" class="floating-video-card"
+                                style="position: absolute; bottom: 0; right: 0; width: 62%; z-index: 10; border-radius: 18px; overflow: hidden; border: 5px solid #ffffff; box-shadow: 0 20px 40px rgba(0,0,0,0.22); cursor: pointer;"
+                                onclick="openVideoModal()">
+                                <div style="position: relative; display: block;">
+                                    <img src="images/home-pages/about.png" alt="Watch Art Contest Video"
+                                        style="width: 100%; height: auto; display: block;">
+
+                                    <div
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);">
+                                    </div>
+
+                                    <div
+                                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 12;">
+                                        <div class="pulse-play-btn"
+                                            style="width: 56px; height: 56px; background-color: #d41919; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; box-shadow: 0 0 0 0 rgba(212, 25, 25, 0.7); animation: pulse-red 2s infinite;">
+                                            <i class="fa fa-play" style="margin-left: 3px;"></i>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        style="position: absolute; bottom: 12px; left: 12px; right: 12px; color: #ffffff; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.6); display: flex; align-items: center; gap: 6px;">
+                                        <i class="fa fa-youtube-play" style="color: #ff4d4d; font-size: 14px;"></i> Art
+                                        Contest Highlights
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- On-Page Video Modal Container -->
+        <div id="schoolVideoModal" class="video-modal-overlay" onclick="closeVideoModal(event)">
+            <div class="video-modal-content">
+                <!-- Prominent Close Button -->
+                <button type="button" class="video-modal-close" onclick="closeVideoModal(event)"
+                    aria-label="Close video">&times;</button>
+                <div class="video-container">
+                    <iframe id="simpleYoutubeVideo" src="" title="AHPS Varthur Video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* Fullscreen Blur Overlay */
+            .video-modal-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.88);
+                z-index: 999999;
+                align-items: center;
+                justify-content: center;
+                backdrop-filter: blur(8px);
+                padding: 15px;
+            }
+
+            /* Modal Box sized specifically for YouTube Shorts (Vertical 9:16) */
+            .video-modal-content {
+                position: relative;
+                width: 100%;
+                max-width: 360px;
+                /* Perfect width for vertical video presentation */
+                height: 85vh;
+                /* Maximum vertical screen coverage */
+                max-height: 640px;
+                background: #000000;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.15);
+            }
+
+            /* Fill Content Box Completely */
+            .video-container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background: #000000;
+            }
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+            /* Close Button Floating on Top-Right Corner */
+            .video-modal-close {
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                width: 38px;
+                height: 38px;
+                background: rgba(0, 0, 0, 0.75);
+                color: #ffffff;
+                font-size: 28px;
+                font-weight: bold;
+                border: 2px solid rgba(255, 255, 255, 0.4);
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 999;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: 1;
+                transition: all 0.25s ease;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            }
+
+            .video-modal-close:hover {
+                background: #d41919;
+                color: #ffffff;
+                border-color: #d41919;
+                transform: scale(1.1);
+            }
+        </style>
+        <!-- JavaScript trigger -->
+        <script>
+            function openVideoModal() {
+                var modal = document.getElementById('schoolVideoModal');
+                var videoIframe = document.getElementById('simpleYoutubeVideo');
+                if (modal && videoIframe) {
+                    videoIframe.src = "https://www.youtube.com/embed/xV6sPVf2A14?autoplay=1&rel=0";
+                    modal.style.display = "flex";
+                }
+            }
+
+            function closeVideoModal(event) {
+                if (!event || event.target.id === 'schoolVideoModal' || event.target.classList.contains('video-modal-close')) {
+                    var modal = document.getElementById('schoolVideoModal');
+                    var videoIframe = document.getElementById('simpleYoutubeVideo');
+
+                    if (videoIframe) videoIframe.src = "";
+                    if (modal) modal.style.display = "none";
+                }
+            }
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeVideoModal();
+                }
+            });
+        </script>
+        <!-- End About Style2 Area -->
+        <!--Start Why Choose Us Area-->
+        <section class="why-choose-us-area">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <p
+                        style="display: inline-block; background-color: #d41919; color: #ffffff; font-size: 32px; line-height: 1.2; font-weight: 800; text-transform: none; padding: 10px 28px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 4px 12px rgba(212, 25, 25, 0.25);">
+                        Why Choose Us?
+                    </p>
+
+                    <div class="title"
+                        style="font-size: 18px; line-height: 26px; font-weight: 700; color: #100505; text-transform: uppercase; letter-spacing: 1.5px;">
+                        10 Pillars of Our Educational Excellence
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="why-choose-card">
+                            <div class="icon-box"><i class="fa fa-child"></i></div>
+                            <h4>Child-Centric Learning Environment</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="why-choose-card">
+                            <div class="icon-box"><i class="fa fa-graduation-cap"></i></div>
+                            <h4>Experienced and Caring Educators</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="why-choose-card">
+                            <div class="icon-box"><i class="fa fa-cubes"></i></div>
+                            <h4>Activity-Based & Experiential Learning</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="why-choose-card">
+                            <div class="icon-box"><i class="fa fa-desktop"></i></div>
+                            <h4>Modern Classrooms with Smart Learning</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="why-choose-card">
+                            <div class="icon-box"><i class="fa fa-shield"></i></div>
+                            <h4>Safe & Secure Campus</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="why-choose-card">
+                            <div class="icon-box"><i class="fa fa-star"></i></div>
+                            <h4>Holistic Development Programmes</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="why-choose-card">
+                            <div class="icon-box"><i class="fa fa-handshake-o"></i></div>
+                            <h4>Strong Parent-School Partnership</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="why-choose-card">
+                            <div class="icon-box"><i class="fa fa-paint-brush"></i></div>
+                            <h4>Sports, Arts & Performing Arts</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="why-choose-card">
+                            <div class="icon-box"><i class="fa fa-lightbulb-o"></i></div>
+                            <h4>STEM & Innovation Activities</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="why-choose-card">
+                            <div class="icon-box"><i class="fa fa-book"></i></div>
+                            <h4>Value-Based Education</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Why Choose Us Area-->
+
+        <!--Start Director's Word Area-->
+        <section class="directors-word-area"
+            style="padding: 80px 0; background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+            <div class="container">
+                <div class="sec-title text-center" style="margin-bottom: 45px;">
+                    <p
+                        style="display: inline-block; background-color: #d41919; color: #ffffff; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 20px; border-radius: 6px; font-size: 13px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(212, 25, 25, 0.25);">
+                        From the desk of :
+                    </p>
+                    <div class="title" style="font-size: 36px; font-weight: 800; color: #0f172a; line-height: 1.2;">
+                        Directors &amp; Principal
+                    </div>
+                </div>
+
+                <!-- Leadership Tabs Nav -->
+                <div class="leadership-nav-wrapper" style="margin-bottom: 40px;">
+                    <div class="row justify-content-center"
+                        style="gap: 10px; margin: 0 auto; display: flex; flex-wrap: wrap;">
+                        <button onclick="showDirectorTab('tab-yeshvanth', this)" class="director-tab-btn active-tab"
+                            style="flex: 1 1 180px; max-width: 210px; padding: 12px 15px; border-radius: 12px; border: 2px solid #fc0505; background: #fc0505; color: #ffffff; cursor: pointer; transition: all 0.3s ease; text-align: center; box-shadow: 0 4px 12px rgba(252,5,5,0.15);">
+                            <div style="font-weight: 700; font-size: 14px;">Mr. Yeshvanth Gowda</div>
+                            <div
+                                style="font-size: 11px; opacity: 0.9; text-transform: uppercase; letter-spacing: 0.5px;">
+                                Regional Director</div>
+                        </button>
+                        <button onclick="showDirectorTab('tab-lakshmi', this)" class="director-tab-btn"
+                            style="flex: 1 1 180px; max-width: 210px; padding: 12px 15px; border-radius: 12px; border: 2px solid #cbd5e1; background: #ffffff; color: #334155; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                            <div style="font-weight: 700; font-size: 14px;">Mr. Lakshmi Prasad</div>
+                            <div
+                                style="font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">
+                                Director</div>
+                        </button>
+                        <button onclick="showDirectorTab('tab-chethan', this)" class="director-tab-btn"
+                            style="flex: 1 1 180px; max-width: 210px; padding: 12px 15px; border-radius: 12px; border: 2px solid #cbd5e1; background: #ffffff; color: #334155; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                            <div style="font-weight: 700; font-size: 14px;">Mr. Chethan</div>
+                            <div
+                                style="font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">
+                                Director</div>
+                        </button>
+                        <button onclick="showDirectorTab('tab-sumanth', this)" class="director-tab-btn"
+                            style="flex: 1 1 180px; max-width: 210px; padding: 12px 15px; border-radius: 12px; border: 2px solid #cbd5e1; background: #ffffff; color: #334155; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                            <div style="font-weight: 700; font-size: 14px;">Mr. Sumanth</div>
+                            <div
+                                style="font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">
+                                Director</div>
+                        </button>
+                        <button onclick="showDirectorTab('tab-sukanya', this)" class="director-tab-btn"
+                            style="flex: 1 1 180px; max-width: 210px; padding: 12px 15px; border-radius: 12px; border: 2px solid #cbd5e1; background: #ffffff; color: #334155; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+                            <div style="font-weight: 700; font-size: 14px;">Ms. Sukanya Maity</div>
+                            <div
+                                style="font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">
+                                Academic Director / Principal</div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab 1: Mr. Yeshvanth Gowda -->
+                <div id="tab-yeshvanth" class="director-tab-panel" style="display: block;">
+                    <div class="row align-items-center">
+                        <div class="col-xl-5 col-lg-5 col-md-12">
+                            <div class="director-img-box" style="position: relative; margin-bottom: 25px;">
+                                <div
+                                    style="border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 4px solid #ffffff; height: 360px;">
+                                    <img src="images/resources/director.jpeg"
+                                        alt="Mr. Yeshvanth Gowda - Regional Director"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div
+                                    style="position: absolute; bottom: -18px; right: 20px; background: #fc0505; color: #ffffff; padding: 8px 18px; border-radius: 8px; font-weight: 700; font-size: 13px; box-shadow: 0 5px 15px rgba(252,5,5,0.3);">
+                                    <i class="fa fa-quote-left" style="color: #F78F1E; margin-right: 6px;"></i>
+                                    Director's Message
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-12">
+                            <div class="director-details-content" style="padding-left: 15px;">
+                                <div class="director-quote-text"
+                                    style="position: relative; background: #ffffff; padding: 32px; border-radius: 16px; border-left: 6px solid #fc0505; box-shadow: 0 10px 30px rgba(0,0,0,0.06); margin-bottom: 22px;">
+                                    <p
+                                        style="font-size: 16px; line-height: 1.85; color: #334155; margin: 0; font-style: italic;">
+                                        "Mr. Yeshvanth Gowda serves as the Regional Director for Bachpan Play School in
+                                        Karnataka and Academic Heights Public School, Varthur. With a strong vision for
+                                        quality education. His leadership blends innovation with values, ensuring
+                                        students receive a nurturing and future-ready learning environment. Passionate
+                                        about empowering educators and fostering young minds, he continues to shape the
+                                        educational landscape with dedication and integrity."
+                                    </p>
+                                </div>
+                                <div class="director-info" style="padding-left: 5px;">
+                                    <h3 style="font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 4px;">
+                                        Mr. Yeshvanth Gowda</h3>
+                                    <p
+                                        style="color: #F78F1E; font-weight: 700; font-size: 14px; margin: 0; text-transform: uppercase; letter-spacing: 0.5px;">
+                                        Regional Director &mdash; Bachpan Play School (Karnataka) &amp; Academic Heights
+                                        Public School (Varthur)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Mr. Lakshmi Prasad -->
+                <div id="tab-lakshmi" class="director-tab-panel" style="display: none;">
+                    <div class="row align-items-center">
+                        <div class="col-xl-5 col-lg-5 col-md-12">
+                            <div class="director-img-box" style="position: relative; margin-bottom: 25px;">
+                                <div
+                                    style="border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 4px solid #ffffff; height: 360px;">
+                                    <img src="images/resources/lakshmi_prasad.jpeg" alt="Mr. Lakshmi Prasad - Director"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div
+                                    style="position: absolute; bottom: -18px; right: 20px; background: #fc0505; color: #ffffff; padding: 8px 18px; border-radius: 8px; font-weight: 700; font-size: 13px; box-shadow: 0 5px 15px rgba(252,5,5,0.3);">
+                                    <i class="fa fa-quote-left" style="color: #F78F1E; margin-right: 6px;"></i>
+                                    Director's Message
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-12">
+                            <div class="director-details-content" style="padding-left: 15px;">
+                                <div class="director-quote-text"
+                                    style="position: relative; background: #ffffff; padding: 32px; border-radius: 16px; border-left: 6px solid #fc0505; box-shadow: 0 10px 30px rgba(0,0,0,0.06); margin-bottom: 22px;">
+                                    <p
+                                        style="font-size: 16px; line-height: 1.85; color: #334155; margin: 0; font-style: italic;">
+                                        "Mr. Lakshmi Prasad is the Director of Academic Heights Public School, Varthur.
+                                        A committed leader with a passion for academic excellence, he strives to create
+                                        an environment where students can learn, grow, and succeed. Under his guidance,
+                                        the school focuses on innovative teaching methods, strong values, and all-round
+                                        development. His dedication to quality education ensures that every child is
+                                        prepared to face the future with confidence and competence."
+                                    </p>
+                                </div>
+                                <div class="director-info" style="padding-left: 5px;">
+                                    <h3 style="font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 4px;">
+                                        Mr. Lakshmi Prasad</h3>
+                                    <p
+                                        style="color: #F78F1E; font-weight: 700; font-size: 14px; margin: 0; text-transform: uppercase; letter-spacing: 0.5px;">
+                                        Director &mdash; Academic Heights Public School (Varthur)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Mr. Chethan -->
+                <div id="tab-chethan" class="director-tab-panel" style="display: none;">
+                    <div class="row align-items-center">
+                        <div class="col-xl-5 col-lg-5 col-md-12">
+                            <div class="director-img-box" style="position: relative; margin-bottom: 25px;">
+                                <div
+                                    style="border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 4px solid #ffffff; height: 360px;">
+                                    <img src="images/resources/2.png" alt="Mr. Chethan - Director"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div
+                                    style="position: absolute; bottom: -18px; right: 20px; background: #fc0505; color: #ffffff; padding: 8px 18px; border-radius: 8px; font-weight: 700; font-size: 13px; box-shadow: 0 5px 15px rgba(252,5,5,0.3);">
+                                    <i class="fa fa-quote-left" style="color: #F78F1E; margin-right: 6px;"></i>
+                                    Director's Message
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-12">
+                            <div class="director-details-content" style="padding-left: 15px;">
+                                <div class="director-quote-text"
+                                    style="position: relative; background: #ffffff; padding: 32px; border-radius: 16px; border-left: 6px solid #fc0505; box-shadow: 0 10px 30px rgba(0,0,0,0.06); margin-bottom: 22px;">
+                                    <p
+                                        style="font-size: 16px; line-height: 1.85; color: #334155; margin: 0; font-style: italic;">
+                                        "Mr. Chethan, Director of Academic Heights Public School, Varthur, is a dynamic
+                                        leader who believes education should inspire curiosity, creativity, and
+                                        confidence. His approach combines modern educational practices with strong
+                                        values, ensuring that learning extends beyond the classroom. With his guidance,
+                                        the school continues to grow as a center of excellence and opportunity."
+                                    </p>
+                                </div>
+                                <div class="director-info" style="padding-left: 5px;">
+                                    <h3 style="font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 4px;">
+                                        Mr. Chethan</h3>
+                                    <p
+                                        style="color: #F78F1E; font-weight: 700; font-size: 14px; margin: 0; text-transform: uppercase; letter-spacing: 0.5px;">
+                                        Director &mdash; Academic Heights Public School (Varthur)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Mr. Sumanth -->
+                <div id="tab-sumanth" class="director-tab-panel" style="display: none;">
+                    <div class="row align-items-center">
+                        <div class="col-xl-5 col-lg-5 col-md-12">
+                            <div class="director-img-box" style="position: relative; margin-bottom: 25px;">
+                                <div
+                                    style="border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 4px solid #ffffff; height: 360px;">
+                                    <img src="images/resources/4.png" alt="Mr. Sumanth - Director"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div
+                                    style="position: absolute; bottom: -18px; right: 20px; background: #fc0505; color: #ffffff; padding: 8px 18px; border-radius: 8px; font-weight: 700; font-size: 13px; box-shadow: 0 5px 15px rgba(252,5,5,0.3);">
+                                    <i class="fa fa-quote-left" style="color: #F78F1E; margin-right: 6px;"></i>
+                                    Director's Message
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-12">
+                            <div class="director-details-content" style="padding-left: 15px;">
+                                <div class="director-quote-text"
+                                    style="position: relative; background: #ffffff; padding: 32px; border-radius: 16px; border-left: 6px solid #fc0505; box-shadow: 0 10px 30px rgba(0,0,0,0.06); margin-bottom: 22px;">
+                                    <p
+                                        style="font-size: 16px; line-height: 1.85; color: #334155; margin: 0; font-style: italic;">
+                                        "Mr. Sumanth brings a forward-thinking approach to his role as Director of
+                                        Academic Heights Public School, Varthur. Passionate about transforming
+                                        education, he focuses on creating opportunities that encourage students to think
+                                        critically, act responsibly, and dream big. His leadership is marked by a strong
+                                        belief in teamwork, continuous improvement, and fostering a school culture where
+                                        both academic excellence and personal growth go hand in hand."
+                                    </p>
+                                </div>
+                                <div class="director-info" style="padding-left: 5px;">
+                                    <h3 style="font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 4px;">
+                                        Mr. Sumanth</h3>
+                                    <p
+                                        style="color: #F78F1E; font-weight: 700; font-size: 14px; margin: 0; text-transform: uppercase; letter-spacing: 0.5px;">
+                                        Director &mdash; Academic Heights Public School (Varthur)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 5: Ms. Sukanya Maity -->
+                <div id="tab-sukanya" class="director-tab-panel" style="display: none;">
+                    <div class="row align-items-center">
+                        <div class="col-xl-5 col-lg-5 col-md-12">
+                            <div class="director-img-box" style="position: relative; margin-bottom: 25px;">
+                                <div
+                                    style="border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 4px solid #ffffff; height: 360px;">
+                                    <img src="images/resources/Sukanya.jpeg"
+                                        alt="Ms. Sukanya Maity - Academic Director Principal"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div
+                                    style="position: absolute; bottom: -18px; right: 20px; background: #fc0505; color: #ffffff; padding: 8px 18px; border-radius: 8px; font-weight: 700; font-size: 13px; box-shadow: 0 5px 15px rgba(252,5,5,0.3);">
+                                    <i class="fa fa-quote-left" style="color: #F78F1E; margin-right: 6px;"></i>
+                                    Principal's Message
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-12">
+                            <div class="director-details-content" style="padding-left: 15px;">
+                                <div class="director-quote-text"
+                                    style="position: relative; background: #ffffff; padding: 32px; border-radius: 16px; border-left: 6px solid #fc0505; box-shadow: 0 10px 30px rgba(0,0,0,0.06); margin-bottom: 22px;">
+                                    <p
+                                        style="font-size: 16px; line-height: 1.85; color: #334155; margin: 0; font-style: italic;">
+                                        "Ms. Sukanya Maity joins AHPS Varthur as the Academic Director–Principal. She
+                                        comes with 30+ years of experience in the field of education and with 10+ years
+                                        of experience in a school leadership role. Ms. Sukanya hails from a family of
+                                        educationists and litterateurs and has a proven track record as an exemplified
+                                        school leader. A passionate follower of the likes of Mother Teresa and Maya
+                                        Angelou, she is indoctrinated to creating in school an ambiance of learning that
+                                        amalgamates with the holistic development of children and personality
+                                        development."
+                                    </p>
+                                </div>
+                                <div class="director-info" style="padding-left: 5px;">
+                                    <h3 style="font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 4px;">
+                                        Ms. Sukanya Maity</h3>
+                                    <p
+                                        style="color: #F78F1E; font-weight: 700; font-size: 14px; margin: 0; text-transform: uppercase; letter-spacing: 0.5px;">
+                                        Academic Director &amp; Principal &mdash; Academic Heights Public School
+                                        (Varthur)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <script>
+            function showDirectorTab(tabId, btnElement) {
+                var panels = document.querySelectorAll('.director-tab-panel');
+                panels.forEach(function (panel) {
+                    panel.style.display = 'none';
+                });
+                var btns = document.querySelectorAll('.director-tab-btn');
+                btns.forEach(function (btn) {
+                    btn.style.background = '#ffffff';
+                    btn.style.bordercolor = '#cbd5e1';
+                    btn.style.color = '#334155';
+                    btn.style.boxShadow = 'none';
+                });
+
+                var activePanel = document.getElementById(tabId);
+                if (activePanel) {
+                    activePanel.style.display = 'block';
+                }
+                if (btnElement) {
+                    btnElement.style.background = '#fc0505';
+                    btnElement.style.bordercolor = '#fc0505';
+                    btnElement.style.color = '#ffffff';
+                    btnElement.style.boxShadow = '0 4px 12px rgba(252,5,5,0.2)';
+                }
+            }
+        </script>
+        <!--End Director's Word Area-->
+
+        <!--Start Testimonial Style2 Area-->
+        <section class="testimonial-style2-area">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <p
+                        style="font-size: 42px; line-height: 52px; font-weight: 800; color: #1a1a1a; text-transform: none; margin-bottom: 20px;">
+                        Testimonials
+                    </p>
+
+                    <!-- Category Navigation Tabs -->
+                    <div class="testimonial-tabs-nav" style="margin-bottom: 30px;">
+                        <button class="tab-btn active" onclick="switchTestimonialTab('parents')"
+                            style="padding: 10px 24px; margin: 0 5px; font-weight: 600; border: none; background: #1a1a1a; color: #fff; border-radius: 4px; cursor: pointer;">
+                            Parents' Testimonials
+                        </button>
+                        <button class="tab-btn" onclick="switchTestimonialTab('teachers')"
+                            style="padding: 10px 24px; margin: 0 5px; font-weight: 600; border: none; background: #e0e0e0; color: #333; border-radius: 4px; cursor: pointer;">
+                            Teachers' Testimonials
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="testimonial-style2-content">
+
+                            <!-- PARENTS TESTIMONIALS TAB -->
+                            <div id="parents-testimonials" class="testimonial-tab-content active-tab">
+                                <div class="testimonial-carousel owl-carousel owl-theme">
+
+                                    <!-- Parents Testimonial 1 -->
+                                    <div class="single-testimonial-style2 text-center">
+                                        <div class="inner-content">
+                                            <div class="static-content">
+                                                <div class="quote-icon">
+                                                    <span class="icon-quote3"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <p>"AHPS Varthur feels like a second home. I've made wonderful
+                                                        friends, learned valuable life skills, and enjoy coming to
+                                                        school every day."</p>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="overlay-content">
+                                                <div class="text-box">
+                                                    <p>"AHPS Varthur feels like a second home. I've made wonderful
+                                                        friends, learned valuable life skills, and enjoy coming to
+                                                        school every day."</p>
+                                                    <div class="quote-icon">
+                                                        <span class="icon-quote3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Parents Testimonial 2 -->
+                                    <div class="single-testimonial-style2 text-center">
+                                        <div class="inner-content">
+                                            <div class="static-content">
+                                                <div class="quote-icon">
+                                                    <span class="icon-quote3"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <p>We would like to express our heartfelt gratitude to the
+                                                        principal,coordinator,teaching & non teaching staff for making
+                                                        us a part of the AHPS Varthur family.The entire process, right
+                                                        from admissions to support has been seemless.The nurturing
+                                                        guidance,motivation and individual attention provided by the
+                                                        experienced teachers has boosted our daughter's self confidence
+                                                        and morale.
+                                                        The facilities such as digitalised classroom,2 tier library,well
+                                                        ventilated classroom,Sports activities,well- coordinated events
+                                                        (to mention a few) are remarkable.Hope the school reaches the
+                                                        peak of heights very soon!</p>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="overlay-content">
+                                                <div class="text-box">
+                                                    <p>We would like to express our heartfelt gratitude to the
+                                                        principal,coordinator,teaching & non teaching staff for making
+                                                        us a part of the AHPS Varthur family.The entire process, right
+                                                        from admissions to support has been seemless.The nurturing
+                                                        guidance,motivation and individual attention provided by the
+                                                        experienced teachers has boosted our daughter's self confidence
+                                                        and morale.
+                                                        The facilities such as digitalised classroom,2 tier library,well
+                                                        ventilated classroom,Sports activities,well- coordinated events
+                                                        (to mention a few) are remarkable.Hope the school reaches the
+                                                        peak of heights very soon!</p>
+                                                    <div class="quote-icon">
+                                                        <span class="icon-quote3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Parents Testimonial 3 -->
+                                    <div class="single-testimonial-style2 text-center">
+                                        <div class="inner-content">
+                                            <div class="static-content">
+                                                <div class="quote-icon">
+                                                    <span class="icon-quote3"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <p>"From academics to robotics, chess, and swimming, AHPS Varthur
+                                                        helps us discover our talents and build confidence.</p>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="overlay-content">
+                                                <div class="text-box">
+                                                    <p>"From academics to robotics, chess, and swimming, AHPS Varthur
+                                                        helps us discover our talents and build confidence.</p>
+                                                    <div class="quote-icon">
+                                                        <span class="icon-quote3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Parents Testimonial 2 -->
+                                    <div class="single-testimonial-style2 text-center">
+                                        <div class="inner-content">
+                                            <div class="static-content">
+                                                <div class="quote-icon">
+                                                    <span class="icon-quote3"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <p>The teachers are caring, supportive, and always inspire us to
+                                                        believe in ourselves. I'm proud to be an AHPS Varthur student.
+                                                    </p>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="overlay-content">
+                                                <div class="text-box">
+                                                    <p>The teachers are caring, supportive, and always inspire us to
+                                                        believe in ourselves. I'm proud to be an AHPS Varthur student.
+                                                    </p>
+                                                    <div class="quote-icon">
+                                                        <span class="icon-quote3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Parents Testimonial 2 -->
+                                    <div class="single-testimonial-style2 text-center">
+                                        <div class="inner-content">
+                                            <div class="static-content">
+                                                <div class="quote-icon">
+                                                    <span class="icon-quote3"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <p>I love the sports, activities, and smart classrooms at AHPS
+                                                        Varthur. Every day is a new opportunity to learn and grow</p>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="overlay-content">
+                                                <div class="text-box">
+                                                    <p>I love the sports, activities, and smart classrooms at AHPS
+                                                        Varthur. Every day is a new opportunity to learn and grow</p>
+                                                    <div class="quote-icon">
+                                                        <span class="icon-quote3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+
+                            <!-- TEACHERS TESTIMONIALS TAB -->
+                            <div id="teachers-testimonials" class="testimonial-tab-content" style="display: none;">
+                                <div class="testimonial-carousel owl-carousel owl-theme">
+
+                                    <!-- Teachers Testimonial 1 -->
+                                    <div class="single-testimonial-style2 text-center">
+                                        <div class="inner-content">
+                                            <div class="static-content">
+                                                <div class="quote-icon">
+                                                    <span class="icon-quote3"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <p>Teaching at AHPS Varthur is a truly rewarding experience. The
+                                                        school encourages innovation, collaboration, and continuous
+                                                        learning. Every child is nurtured with care and guided to reach
+                                                        their full potential. I am proud to be part of a team that
+                                                        inspires young minds every day.</p>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="overlay-content">
+                                                <div class="text-box">
+                                                    <p> Teaching at AHPS Varthur is a truly rewarding experience. The
+                                                        school encourages innovation, collaboration, and continuous
+                                                        learning. Every child is nurtured with care and guided to reach
+                                                        their full potential. I am proud to be part of a team that
+                                                        inspires young minds every day.
+                                                    </p>
+                                                    <div class="quote-icon">
+                                                        <span class="icon-quote3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Teachers Testimonial 2 -->
+                                    <div class="single-testimonial-style2 text-center">
+                                        <div class="inner-content">
+                                            <div class="static-content">
+                                                <div class="quote-icon">
+                                                    <span class="icon-quote3"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <p>Being an English teacher at Academic Heights Public School,
+                                                        Varthur, is truly rewarding. The school&#39;s
+                                                        supportive environment, innovative teaching approach, and
+                                                        commitment to holistic education
+                                                        inspire both teachers and students to excel.
+                                                        I am honoured to contribute to shaping young minds and preparing
+                                                        them for a bright future.
+                                                        AHPS makes me feel at home.</p>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="overlay-content">
+                                                <div class="text-box">
+                                                    <p>Being an English teacher at Academic Heights Public School,
+                                                        Varthur, is truly rewarding. The school&#39;s
+                                                        supportive environment, innovative teaching approach, and
+                                                        commitment to holistic education
+                                                        inspire both teachers and students to excel.
+                                                        I am honoured to contribute to shaping young minds and preparing
+                                                        them for a bright future.
+                                                        AHPS makes me feel at home.</p>
+                                                    <div class="quote-icon">
+                                                        <span class="icon-quote3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Teachers Testimonial 3 -->
+                                    <div class="single-testimonial-style2 text-center">
+                                        <div class="inner-content">
+                                            <div class="static-content">
+                                                <div class="quote-icon">
+                                                    <span class="icon-quote3"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <p>AHPS Varthur believes in holistic education that balances
+                                                        academics, sports, technology, and life skills. We encourage
+                                                        every child to explore their talents and build confidence.
+                                                        Watching our students grow into responsible, compassionate, and
+                                                        confident individuals is incredibly fulfilling. It is a joy to
+                                                        be part of their learning journey.</p>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="overlay-content">
+                                                <div class="text-box">
+                                                    <p>AHPS Varthur believes in holistic education that balances
+                                                        academics, sports, technology, and life skills. We encourage
+                                                        every child to explore their talents and build confidence.
+                                                        Watching our students grow into responsible, compassionate, and
+                                                        confident individuals is incredibly fulfilling. It is a joy to
+                                                        be part of their learning journey.</p>
+                                                    <div class="quote-icon">
+                                                        <span class="icon-quote3"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="client-info">
+                                                    <div class="review-box">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function switchTestimonialTab(type) {
+                const parentsTab = document.getElementById('parents-testimonials');
+                const teachersTab = document.getElementById('teachers-testimonials');
+                const buttons = document.querySelectorAll('.testimonial-tabs-nav .tab-btn');
+
+                if (type === 'parents') {
+                    parentsTab.style.display = 'block';
+                    teachersTab.style.display = 'none';
+                    buttons[0].style.background = '#1a1a1a';
+                    buttons[0].style.color = '#fff';
+                    buttons[1].style.background = '#e0e0e0';
+                    buttons[1].style.color = '#333';
+                } else {
+                    parentsTab.style.display = 'none';
+                    teachersTab.style.display = 'block';
+                    buttons[1].style.background = '#1a1a1a';
+                    buttons[1].style.color = '#fff';
+                    buttons[0].style.background = '#e0e0e0';
+                    buttons[0].style.color = '#333';
+                }
+            }
+        </script>
+        <!--End Testimonial Style2 Area-->
+
+        <!--Start Footer Area Style4-->
+        <footer class="footer-area style4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-footer-widget marbtm50-s4">
+                            <div class="our-info-box">
+                                <div class="footer-logo">
+                                    <a href="index.html">
+                                        <img src="images/footer/footer-logo.png"
+                                            alt="Academic Heights Public School Logo">
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <p>Academic Heights Public School is dedicated to nurturing curiosity, creativity,
+                                        and leadership in every student, preparing them for academic success and life.
+                                    </p>
+                                </div>
+                                <div class="follow-us-social-links clearfix">
+                                    <span>Follow Us On:</span>
+                                    <ul>
+                                        <li><a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a></li>
+                                        <li><a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-footer-widget s4">
+                            <div class="title-s4">
+                                <h3>Quick Links</h3>
+                            </div>
+                            <div class="single-footer-link-box clearfix">
+                                <ul class="clearfix">
+                                    <li><a href="about.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>About Us</a></li>
+                                    <li><a href="services.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>Academics</a></li>
+                                    <li><a href="project.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>Admissionss</a></li>
+                                    <li><a href="blog.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>News &amp; Events</a>
+                                    </li>
+                                    <li><a href="contact.html"><i class="fa fa-angle-right"
+                                                style="margin-right: 8px; color: #e66a0b;"></i>Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                        <div class="single-footer-widget s4">
+                            <div class="title-s4">
+                                <h3>Contact Information</h3>
+                            </div>
+                            <div class="footer-contact-info-s4">
+                                <ul>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-map-marker"></i></div>
+                                        <div class="text">
+                                            <p>Sy No. 46/8, Chikkanekundi, Dommasandra Road, Varthur, Bangalore, India,
+                                                560087</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-phone"></i></div>
+                                        <div class="text">
+                                            <p><a href="tel:+918050065050">+91 8050065050</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fa fa-envelope"></i></div>
+                                        <div class="text">
+                                            <p><a
+                                                    href="mailto:Admissionss@ahpsvarthur.com">Admissionss@ahpsvarthur.com</a>
+                                            </p>
+                                            <p><a href="mailto:support@ahpsvarthur.com">support@ahpsvarthur.com</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer Area Style4-->
+
+        <!--Start Footer Bottom Area-->
+        <section class="footer-bottom-area style3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="copyright-text text-center">
+                            <p>© 2026 <a href="index.html">Academic Heights Public School</a>. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Footer Bottom Area-->
+
+    </div>
+
+    <!-- Scroll Top Button -->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+    <!-- Admissions Enquiry Modal -->
+    <div class="modal fade" id="AdmissionsModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="modal-close-top" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <div class="modal-body">
+                    <!-- Header with Brand Logo -->
+                    <div class="modal-header-box">
+                        <img src="images/brand/logo.png" alt="AHPS Logo">
+                        <div class="modal-header-title">
+                            <h3>Admissions Enquiry Form</h3>
+                            <p>Begin Your Child's Learning Journey</p>
+                        </div>
+                    </div>
+
+                    <!-- Alert Box for Web3Forms Status -->
+                    <div id="modal-form-result"
+                        style="display: none; margin-bottom: 15px; padding: 10px 14px; border-radius: 8px; font-size: 13px;">
+                    </div>
+
+                    <form id="modal-enquiry-form" action="https://api.web3forms.com/submit" method="POST">
+
+                        <!-- Web3Forms Config -->
+                        <input type="hidden" name="access_key" value="29251925-a4be-44f5-906a-75ad8849fe10">
+                        <input type="hidden" name="subject"
+                            value="New Admissions Enquiry (Apply Now) - Academic Heights Public School">
+                        <input type="hidden" name="from_name" value="AHPS Admissions Portal">
+                        <input type="checkbox" name="botcheck" style="display: none;">
+
+                        <!-- Student Details -->
+                        <div class="form-section-title"><i class="fa fa-user"></i> Student Details</div>
+                        <div class="row">
+                            <div class="col-sm-6 col-12">
+                                <div class="modal-form-group">
+                                    <label>Student Name *</label>
+                                    <i class="fa fa-user modal-icon"></i>
+                                    <input type="text" name="student_name" placeholder="Enter student full name"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="modal-form-group">
+                                    <label>Date of Birth *</label>
+                                    <i class="fa fa-calendar modal-icon"></i>
+                                    <input type="text" name="dob" placeholder="DD / MM / YYYY"
+                                        onfocus="(this.type='date')" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="modal-form-group">
+                                    <label>Gender *</label>
+                                    <div class="radio-group">
+                                        <label><input type="radio" name="gender" value="Male" required> Male</label>
+                                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                                        <label><input type="radio" name="gender" value="Other"> Other</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="modal-form-group">
+                                    <label>Applying For *</label>
+                                    <select name="modal_applying_for" id="modal_applying_for" required>
+                                        <option value="" disabled selected>Select Class</option>
+                                        <option value="Nursery">Nursery</option>
+                                        <option value="LKG">LKG</option>
+                                        <option value="UKG">UKG</option>
+                                        <option value="Grade I Onwards">Grade I Onwards</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Parent / Guardian Details -->
+                        <div class="form-section-title"><i class="fa fa-users"></i> Parent / Guardian Details</div>
+                        <div class="row">
+                            <div class="col-sm-6 col-12">
+                                <div class="modal-form-group">
+                                    <label>Parent / Guardian Name *</label>
+                                    <i class="fa fa-user modal-icon"></i>
+                                    <input type="text" name="parent_name" placeholder="Enter parent/guardian name"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="modal-form-group">
+                                    <label>Mobile Number *</label>
+                                    <i class="fa fa-phone modal-icon"></i>
+                                    <input type="tel" name="phone" placeholder="Enter mobile number" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="modal-form-group">
+                                    <label>Email Address</label>
+                                    <i class="fa fa-envelope modal-icon"></i>
+                                    <input type="email" name="email" placeholder="Enter email address">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="form-section-title"><i class="fa fa-map-marker"></i> Address</div>
+                        <div class="row">
+                            <div class="col-sm-4 col-12">
+                                <div class="modal-form-group">
+                                    <label>City *</label>
+                                    <i class="fa fa-map-marker modal-icon"></i>
+                                    <input type="text" name="city" placeholder="Enter city" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="modal-form-group">
+                                    <label>State *</label>
+                                    <select name="state" required>
+                                        <option value="" disabled selected>Select state</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="modal-form-group">
+                                    <label>Pincode</label>
+                                    <i class="fa fa-map-pin modal-icon"></i>
+                                    <input type="text" name="pincode" placeholder="Enter pincode">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div class="form-section-title"><i class="fa fa-info-circle"></i> Additional Information</div>
+                        <div class="row">
+                            <div class="col-sm-6 col-12">
+                                <div class="modal-form-group">
+                                    <label>Previous School</label>
+                                    <i class="fa fa-university modal-icon"></i>
+                                    <input type="text" name="previous_school" placeholder="Enter previous school name">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="modal-form-group">
+                                    <label>Message / Query</label>
+                                    <i class="fa fa-pencil modal-icon"></i>
+                                    <textarea name="message" rows="1" placeholder="Write your message..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Terms Checkbox -->
+                        <div style="margin-top: 10px;">
+                            <label style="font-size: 12px; color: #64748b; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" required checked> I agree to be contacted by Academic Heights
+                                Public School regarding Admissions.
+                            </label>
+                        </div>
+
+                        <!-- Submit & Cancel Buttons -->
+                        <div class="modal-actions">
+                            <button type="submit" class="btn-submit-modal">Submit Application <i
+                                    class="fa fa-arrow-right"></i></button>
+                            <button type="button" class="btn-cancel-modal" data-dismiss="modal">Cancel</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery.bootstrap-touchspin.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.paroller.min.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/map-helper.js"></script>
+
+    <script src="assets/language-switcher/jquery.polyglot.language.switcher.js"></script>
+    <script src="assets/timepicker/timePicker.js"></script>
+    <script src="assets/html5lightbox/html5lightbox.js"></script>
+
+    <!--Revolution Slider-->
+    <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="js/main-slider-script.js"></script>
+
+    <!-- thm custom script -->
+    <script src="js/custom.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="http://wa.me/918050065050" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <!-- Modal Dropdown & Submission Handler -->
+    <script>
+        $(document).ready(function () {
+            // Dynamically set dropdown option based on clicked button/card
+            $('[data-target="#AdmissionsModal"]').on('click', function () {
+                var selectedGrade = $(this).attr('data-grade');
+                if (selectedGrade) {
+                    $('#modal_applying_for').val(selectedGrade);
+                }
+            });
+
+            // Web3Forms Modal Submission
+            const modalForm = document.getElementById('modal-enquiry-form');
+            const modalResultAlert = document.getElementById('modal-form-result');
+
+            if (modalForm && modalResultAlert) {
+                modalForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const formData = new FormData(modalForm);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+
+                    modalResultAlert.style.display = "block";
+                    modalResultAlert.style.background = "#eff6ff";
+                    modalResultAlert.style.color = "#1d4ed8";
+                    modalResultAlert.style.border = "1px solid #bfdbfe";
+                    modalResultAlert.innerHTML = "<i class='fa fa-spinner fa-spin'></i> Submitting your enquiry...";
+
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                        .then(async (response) => {
+                            let resJson = await response.json();
+                            if (response.status === 200) {
+                                modalResultAlert.style.background = "#f0fdf4";
+                                modalResultAlert.style.color = "#15803d";
+                                modalResultAlert.style.border = "1px solid #bbf7d0";
+                                modalResultAlert.innerHTML = "<i class='fa fa-check-circle'></i> <strong>Enquiry Submitted!</strong> Thank you. Our Admissionss team will get back to you shortly.";
+                                modalForm.reset();
+                            } else {
+                                modalResultAlert.style.background = "#fef2f2";
+                                modalResultAlert.style.color = "#b91c1c";
+                                modalResultAlert.style.border = "1px solid #fecaca";
+                                modalResultAlert.innerHTML = resJson.message || "Something went wrong. Please try again.";
+                            }
+                        })
+                        .catch(error => {
+                            modalResultAlert.style.background = "#fef2f2";
+                            modalResultAlert.style.color = "#b91c1c";
+                            modalResultAlert.style.border = "1px solid #fecaca";
+                            modalResultAlert.innerHTML = "<i class='fa fa-exclamation-triangle'></i> Submission error. Please check your internet connection.";
+                        });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
